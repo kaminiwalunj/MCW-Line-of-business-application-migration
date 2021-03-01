@@ -61,7 +61,7 @@ In this task you will create a new Azure SQL database to migrate the on-premises
   
         - Password: **demo!pass123**
   
-        - Location: **IMPORTANT: Select the same region as resource group - this makes migration faster.
+        - Location: **IMPORTANT: Select the same region as resource group - this makes migration faster.**
 
     > **Note**: You can verify the location by opening another browser tab, navigating to https://portal.azure.com and selecting Virtual Machines on the left navigation. Use the same region as the **SmartHost{SUFFIX}** virtual machine.
 
