@@ -165,7 +165,7 @@ In this task, you will register your Hyper-V host with the Azure Migrate: Server
 
     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link for the Hyper-V replication provider software installer.](images/Exercise3/discover-3.png "Replication provider download link")
 
-4. Launch **Microsoft Edge** from the desktop shortcut, and paste the link into a new browser tab to download the Azure Site Recovery provider installer..
+4.  Open new browser tab and paste the link you copied earlier to download the Azure Site Recovery provider installer..
 
 5. Return to the **Discover machines** page in your browser and select the blue **Download** button and download the registration key file.
 
@@ -236,8 +236,6 @@ In this task, you will configure and enable the replication of your on-premises 
 
 6. In the **Compute** tab, select the **Standard_F2s_v2** VM size for each virtual machine. Select the **Windows** operating system for the **smarthotelweb1**, **smarthotelweb2** virtual machines and the **Linux** operating system for the **UbuntuWAF** virtual machine. Select **Next**. 
 
-    > **Note**: If you are using an Azure Pass subscription, your subscription may not have a quota allocated for FSv2 virtual machines. In this case, use **DS2_v2 or D2s_v3** virtual machines instead.
-
     ![Screenshot of the 'Compute' tab of the 'Replicate' wizard in Azure Migrate Server Migration. Each VM is configured to use a Standard_F2s_v2 SKU, and has the OS Type specified.](images/Exercise3/replicate-6.png "Replicate - Compute")
 
 7. In the **Disks** tab, review the settings but do not make any changes. Select **Next**, then select **Replicate** to start the server replication.
@@ -270,7 +268,7 @@ In this task you will modify the settings for each replicated VM to use a static
 
    ![Screenshot of the smarthotelweb1 blade with the 'Compute and Network' and 'Edit' links highlighted.](images/Exercise3/config-1.png "Edit Compute and Network settings")
 
-3. Confirm that the VM is configured to use the **F2s_v2** VM size (or **DS2_v2 or D2s_v3** if using an Azure Pass subscription) and that **Use managed disks** is set to **Yes**.
+3. Confirm that the VM is configured to use the **F2s_v2** VM size and that **Use managed disks** is set to **Yes**.
 
 4. Under **Network Interfaces**, select **InternalNATSwitch** to open the network interface settings.
 
