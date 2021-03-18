@@ -148,6 +148,7 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
 6.  From the **AzureMigrateAppliance** VM ,open **PowerShell ISE**  and run as **Administrator** then run the following script to download and install **Chrome**
 ```
+   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
    refreshenv
    choco install googlechrome -y -force
