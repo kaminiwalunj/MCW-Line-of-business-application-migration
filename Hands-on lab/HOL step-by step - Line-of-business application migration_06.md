@@ -14,31 +14,32 @@ In this task, you will create the Azure Migrate project and select the assessmen
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
     * Azure Password: <inject key="AzureAdUserPassword"></inject>
 
-2. Click on **Show Portal Menu** bar and select **All services** in the portal's left navigation. then search for and select **Azure Migrate** to open the Azure Migrate Overview blade, shown below. 
+1. Click on **Show Portal Menu** bar and select **All services** in the portal's left navigation. then search for and select **Azure Migrate** to open the Azure Migrate Overview blade, shown below. 
  
-     ![Screenshot of the All services overview blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Allservices.png?raw=true "Allservices Overview blade")
+    ![Screenshot of the All services overview blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Allservices.png?raw=true "Allservices Overview blade")
 
-3. In the search bar, type *Azure Migrate* and select **Azure Migrate** from the suggestions to open the Azure Migrate Overview blade, as shown below. 
+1. In the search bar, type *Azure Migrate* and select **Azure Migrate** from the suggestions to open the Azure Migrate Overview blade, as shown below. 
  
     ![Screenshot of the Azure migrate overview blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Azmigrate.png?raw=true "Azmigrate Overview blade")
 
 
-4. Select **Assess and migrate servers**, then **Create project**. 
+1. Under Migration goals select **Windows, Linux and SQL Server**.
  
-     ![Screenshot of the Access and migrate overview blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/assess%20and%20migrate.png?raw=true "Access and migrate Overview blade") 
- 
-     ![Screenshot of the Create project overview blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/createproject.png?raw=true "Create project Overview blade")
+    ![](images/Exercise1/SP-Ex1t1s4.png)
 
-5. Select your **subscription** and select existing resource group named **AzureMigrateRG**. Enter **SmartHotelMigration** as the Migrate project name, and choose a **geography** close to you to store the migration assessment data. Then select **Create**.
+1. Now, Select **Create project**. 
 
-    >**Note**: If you are running this lab in a shared subscription you will need to use a migrate project name that is unique in the subscription. Append characters to the end of migrate project name to make your project name unique. For example: **SmartHotelMigration1234**.
+    ![](images/Exercise1/SP-Ex1t1s5.png)
 
+1. Select your **subscription** and select existing resource group named **AzureMigrateRG**. Enter **SmartHotelMigration** as the Migrate project name, and choose a **geography** close to you to store the migration assessment data. Then select **Create**.
 
-   ![Screenshot of the Azure Migrate 'Create project' blade, showing the Azure Migrate project name, resource group and geography.](images/Exercise1/create-project.png "Azure Migrate - Create project")
+    >**Note**: If you are running this lab in a shared subscription you will need to use a migrate project name that is unique in the subscription. Append characters to the end of migrate project name to make your project name unique. For example: **SmartHotelMigrationDID**.
 
-6. The Azure Migrate deployment will start. Once the project creation is done, you should see the **Azure Migrate: Server Assessment** and **Azure Migrate: Server Migration** panels for the current migration project, as shown below.
+    ![](images/Exercise1/SP-Ex1t1s6.png)
 
-    ![Screenshot of the Azure Migrate 'Create project' blade, showing the Server Assessment and Server Migration panels.](images/Exercise1/servers.png "Azure Migrate - Servers view")
+1. The Azure Migrate deployment will start. Once the project creation is done, you should see the **Azure Migrate: Discovery and assessment** and **Azure Migrate: Server Migration** panels for the current migration project, as shown below.
+
+    ![](images/Exercise1/SP-Ex1t1s7.png)
 
 #### Task summary 
 
@@ -48,13 +49,13 @@ In this task you created an Azure Migrate project, using the default built-in to
 
 In this task, you will deploy and configure the Azure Migrate appliance in the on-premises Hyper-V environment. This appliance communicates with the Hyper-V server to gather configuration and performance data about your on-premises VMs, and returns that data to your Azure Migrate project.
 
-1. Under **Azure Migrate: Server Assessment**, select **Discover** to open the **Discover machines** blade.
+1. Under **Azure Migrate: Discovery and assessment**, select **Discover** to open the **Discover** blade.
  
-    ![Screenshot of the Discover machines overview blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Discover%20machines.png?raw=true "Discover Discover machines Overview blade")
+    ![](images/Exercise1/SP-Ex1t2s1.png)
  
 2. Under **Are your machines virtualized?**, select **Yes, with Hyper-V** from the **drop-down** menu.
 
-    ![Screenshot of the Azure Migrate 'Discover machines' blade, with Hyper-V selected.](images/Exercise1/h-v.png "Hyper-V virtualization option")
+    ![](images/Exercise1/SP-Ex1t2s2.png)
 
 2.  In **1: Generate Azure Migrate project key**, provide **SmartHotelAppl** as name for the Azure Migrate appliance that you will set up for discovery of Hyper-V VMs. Select **Generate key** to start the creation of the required Azure resources. 
 
