@@ -33,8 +33,6 @@ In this task, you will and select the assessment and migration tools, the Azure 
 
 1. Select your **subscription** and select existing project named **SmartHotelMigrationDID**. Then select **Ok**.
 
-    >**Note**: If you are running this lab in a shared subscription you will need to use a migrate project name that is unique in the subscription. Append characters to the end of migrate project name to make your project name unique. For example: **SmartHotelMigrationDID**.
-
     ![](images/Exercise1/project-select.png)
 
 1. You should see the **Azure Migrate: Discovery and assessment** and **Azure Migrate: Server Migration** panels for the current migration project, as shown below.
@@ -71,9 +69,9 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
  
     ![Screenshot of the closing the blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Azappliance.png?raw=true "Closing the Azure migrate appliance blade") 
 
-6. Go to **Start** button in the VM, search for *Hyper-V Manager* there and select **Hyper-V Manager** to open it. 
+6. Go to **Start** button in the VM, search for *Hyper-V Manager* there and select **Hyper-V Manager** to open it, or you can click the **Hyper-v manager** icon in the taskbar. 
 
-     ![Screenshot of Hyper-V Manager, with the 'Hyperv Manager' action highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/hyperv0.png?raw=true "Hyperv Manager")
+     ![Screenshot of Hyper-V Manager, with the 'Hyperv Manager' action highlighted.](images/Exercise1/hyper-v-manager.png "Hyperv Manager")
 
 7. In Hyper-V Manager, select **SMARTHOST{SUFFIX}**. You should now see the AzureMigrateAppliance VM and four VMs that comprise the on-premises SmartHotel application.
 
@@ -81,7 +79,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
 8. In Hyper-V Manager, select the **AzureMigrateAppliance** VM, then select **Start** on the right if not already running.
 
-   ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/hyper-v3.png?raw=true "Start AzureMigrateAppliance")
+   ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](images/Exercise1/Start-AzureMigrateAppliance.png "Start AzureMigrateAppliance")
 
 #### Task summary 
 
@@ -93,7 +91,7 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
 1.  In Hyper-V Manager, select the **AzureMigrateAppliance** VM, then select **Connect** on the right.
 
-    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/hyperv-4.png?raw=true "Connect to AzureMigrateAppliance")
+    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](images/Exercise1/connect-AzureMigrateAppliance.png "Connect to AzureMigrateAppliance")
 
 1.  Log in with the Administrator password **demo!pass123** (the login screen may pick up your local keyboard mapping, use the 'eyeball' icon to check).
 
