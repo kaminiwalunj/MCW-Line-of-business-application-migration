@@ -6,7 +6,7 @@ In this exercise, you will use Azure Migrate: Server Assessment to assess the on
 
 ### Task 1: Create the Azure Migrate project and add assessment and migration tools
 
-In this task, you will create the Azure Migrate project and select the assessment and migration tools.
+In this task, you will and select the assessment and migration tools, the Azure Migrate project has been pre-created for you.
 
 > **Note**: In this lab, you will use the Microsoft-provided assessment and migration tools within Azure Migrate. A number of third-party tools are also integrated with Azure Migrate for both assessment and migration. You may wish to spend some time exploring these third-party options outside of this lab.
 
@@ -27,17 +27,17 @@ In this task, you will create the Azure Migrate project and select the assessmen
  
     ![](images/Exercise1/SP-Ex1t1s4.png)
 
-1. Now, Select **Create project**. 
+1. Now, Select **Project(change)**. 
 
-    ![](images/Exercise1/SP-Ex1t1s5.png)
+    ![](images/Exercise1/project-change.png)
 
-1. Select your **subscription** and select existing resource group named **AzureMigrateRG**. Enter **SmartHotelMigration** as the Migrate project name, and choose a **geography** close to you to store the migration assessment data. Then select **Create**.
+1. Select your **subscription** and select existing project named **SmartHotelMigrationDID**. Then select **Ok**.
 
     >**Note**: If you are running this lab in a shared subscription you will need to use a migrate project name that is unique in the subscription. Append characters to the end of migrate project name to make your project name unique. For example: **SmartHotelMigrationDID**.
 
-    ![](images/Exercise1/SP-Ex1t1s6.png)
+    ![](images/Exercise1/project-select.png)
 
-1. The Azure Migrate deployment will start. Once the project creation is done, you should see the **Azure Migrate: Discovery and assessment** and **Azure Migrate: Server Migration** panels for the current migration project, as shown below.
+1. You should see the **Azure Migrate: Discovery and assessment** and **Azure Migrate: Server Migration** panels for the current migration project, as shown below.
 
     ![](images/Exercise1/SP-Ex1t1s7.png)
 
@@ -47,7 +47,7 @@ In this task you created an Azure Migrate project, using the default built-in to
 
 ### Task 2: Deploy the Azure Migrate appliance
 
-In this task, you will deploy and configure the Azure Migrate appliance in the on-premises Hyper-V environment. This appliance communicates with the Hyper-V server to gather configuration and performance data about your on-premises VMs, and returns that data to your Azure Migrate project.
+In this task, you will deploy the Azure Migrate appliance in the on-premises Hyper-V environment. This appliance communicates with the Hyper-V server to gather configuration and performance data about your on-premises VMs, and returns that data to your Azure Migrate project.
 
 1. Under **Azure Migrate: Discovery and assessment**, select **Discover** to open the **Discover** blade.
  
@@ -71,51 +71,15 @@ In this task, you will deploy and configure the Azure Migrate appliance in the o
  
     ![Screenshot of the closing the blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Azappliance.png?raw=true "Closing the Azure migrate appliance blade") 
 
-
-
 6. Go to **Start** button in the VM, search for *Hyper-V Manager* there and select **Hyper-V Manager** to open it. 
 
      ![Screenshot of Hyper-V Manager, with the 'Hyperv Manager' action highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/hyperv0.png?raw=true "Hyperv Manager")
 
-7. In Hyper-V Manager, select **SMARTHOST{SUFFIX}**. You should now see a list of the four VMs that comprise the on-premises SmartHotel application.
+7. In Hyper-V Manager, select **SMARTHOST{SUFFIX}**. You should now see the AzureMigrateAppliance VM and four VMs that comprise the on-premises SmartHotel application.
 
-    ![Screenshot of Hyper-V Manager on the SmartHotelHost, showing 4 VMs: smarthotelSQL1, smarthotelweb1, smarthotelweb2 and UbuntuWAF.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/hyper-v1.png?raw=true "Hyper-V Manager")
+    ![Screenshot of Hyper-V Manager on the SmartHotelHost, showing 4 VMs: smarthotelSQL1, smarthotelweb1, smarthotelweb2 and UbuntuWAF.](images/Exercise1/hyper-v1-2.png "Hyper-V Manager")
 
-You will now deploy the Azure Migrate appliance virtual machine.  Normally, you would first need to download the .ZIP file containing the appliance to your Hyper-V host, and unzip it. To save time, these steps have been completed for you.
-
-8. In Hyper-V Manager, under **Actions**, select **Import Virtual Machine...** to open the **Import Virtual Machine** wizard.
-
-    ![Screenshot of Hyper-V Manager, with the 'Import Virtual Machine' action highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/hyper-v2.png?raw=true "Import Virtual Machine")
-
-9. At the first step, **Before You Begin**, select **Next**.
-
-10.  At the **Locate Folder** step, select **Browse** and navigate to **F:\\VirtualMachines\\AzureMigrateAppliance** (the folder name may also include a version number), then choose **Select Folder**, then select **Next**.
-
-   ![Screenshot of the Hyper-V 'Import Virtual Machine' wizard with the F:\VirtualMachines\AzureMigrateAppliance folder selected.](images/Exercise1/import-vm-2.png "Import Virtual Machine - Locate Folder")
-
-11. At the **Select Virtual Machine** step, the **AzureMigrateAppliance** VM should already be selected. Select **Next**.
-
-   ![Screenshot of the Hyper-V 'Import Virtual Machine' wizard](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/importvm1.png?raw=true "Import Virtual Machine - Locate Folder")
-
-12. At the **Choose Import Type** step, keep the default setting **Register the virtual machine in-place**. Select **Next**.
-
-   ![Screenshot of the Hyper-V 'Import Virtual Machine' wizard](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/importvm2.png?raw=true "Import Virtual Machine - Locate Folder")
-
-13. At the **Connect Network** step, you will see an error that the virtual switch previously used by the Azure Migrate appliance could not be found. From the **Connection** drop down, select the **Azure Migrate Switch**, then select **Next**.
-
-    ![Screenshot of the Hyper-V 'Import Virtual Machine' wizard at the 'Connect Network' step. The 'Azure Migrate Switch' has been selected.](images/Exercise1/import-vm-4.png "Import Virtual Machine - Connect Network")
-
-    > **Note**:  The Azure Migrate appliance needs access to the Internet to upload data to Azure. It also needs access to the Hyper-V host. However, it does not need direct access to the application VMs running on the Hyper-V host. To protect the application environment, the Azure Migrate Appliance should be deployed to a separate subnet within Hyper-V, rather than in the same subnet as your application. 
-    >
-    > The Hyper-V environment has a NAT network using the IP address space 192.168.0.0/16. The internal NAT switch used by the SmartHotel application uses the subnet 192.168.0.0/24, and each VM in the application has been assigned a static IP address from this subnet.
-    >
-    > The Azure Migrate Appliance will be connected to a separate subnet 192.168.1.0/24, which has been set up for you. Using the 'Azure Migrate Switch' connects the appliance to this subnet. The appliance is assigned an IP address from this subnet using a DHCP service running on the SmartHotelHost.
-
-14. Review the summary page, then select **Finish** to create the Azure Migrate appliance VM.
-
-   ![Screenshot of the Hyper-V 'Import Virtual Machine' wizard](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/importvm3.png?raw=true "Import Virtual Machine - Locate Folder")
-
-15. In Hyper-V Manager, select the **AzureMigrateAppliance** VM, then select **Start** on the right.
+8. In Hyper-V Manager, select the **AzureMigrateAppliance** VM, then select **Start** on the right if not already running.
 
    ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/hyper-v3.png?raw=true "Start AzureMigrateAppliance")
 
