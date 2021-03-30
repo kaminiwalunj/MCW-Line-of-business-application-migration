@@ -99,7 +99,7 @@ In this task you will create an Azure Database Migration Service resource. This 
 
 5. Select **Review + create**, followed by **Create**.
 
-> **Note**: Creating a new migration service can take around 20 minutes. You can continue to the next task without waiting for the operation to complete. You will not use the Database Migration Service until task 5.
+> **Note**: Creating a new migration service can take around 20 minutes. You can continue to the next task without waiting for the operation to complete. You will not use the Database Migration Service until task 4.
 
 #### Task summary 
 
