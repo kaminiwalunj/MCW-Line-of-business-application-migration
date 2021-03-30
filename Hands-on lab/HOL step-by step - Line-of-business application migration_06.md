@@ -95,23 +95,8 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
     ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/hyperv-4.png?raw=true "Connect to AzureMigrateAppliance")
 
-1.  A new window will open showing the Azure Migrate appliance. Wait for the License terms screen to show, then select **Accept**.
-
-    ![Screenshot of the Azure Migrate appliance showing the license terms.](images/Exercise1/license-terms.png "Azure Migrate Appliance - License terms")
-
-1.  On the **Customize settings** screen, set the Administrator password to **demo!pass123** (twice). Then select **Finish**.
-
-    > **Note**: When entering the password, the VM uses a US keyboard mapping. If you are using a non-US keyboard, some characters may be entered incorrectly. Select the 'eyeball' icon in the second password entry box to check the password has been entered correctly.
-
-    ![Screenshot of the Azure Migrate appliance showing the set Administrator password prompt.](images/Exercise1/customize-settings.png "Azure Migrate Appliance - Set password")
-
-1.  At the **Connect to AzureMigrateAppliance** prompt, set the appliance screen size using the slider, then select **Connect**.
-
-   ![Screenshot of the Hyper-V 'Import Virtual Machine' wizard](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/importvm4.png?raw=true "Import Virtual Machine - Locate Folder")
-
 1.  Log in with the Administrator password **demo!pass123** (the login screen may pick up your local keyboard mapping, use the 'eyeball' icon to check).
 
- 
 1. Open **Settings**, click on **Apps** and select **Default Apps** from the left hand side menu, scroll down and select **Internet Explorer** which is under **Web browser** then select **Google Chrome** from the list and click on **reset** then close Settings tab to set the **Chrome** as **Default Browser**.
 
 1.  **Wait.** After a minute or two, the browser will open showing the Azure Migrate appliance configuration wizard (it can also be launched from the desktop shortcut).
