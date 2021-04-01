@@ -4,7 +4,7 @@ Duration: 60 minutes
 
 In this exercise, you will use Azure Migrate: Server Assessment to assess the on-premises environment. This will include selecting Azure Migrate tools, deploying the Azure Migrate appliance into the on-premises environment, creating a migration assessment, and using the Azure Migrate dependency visualization.
 
-### Task 1: Create the Azure Migrate project and add assessment and migration tools
+### Task 1: Select the Azure Migrate project and add assessment and migration tools
 
 In this task, you will and select the assessment and migration tools, the Azure Migrate project has been pre-created for you.
 
