@@ -95,7 +95,7 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
 1.  Log in with the Administrator password **demo!pass123** (the login screen may pick up your local keyboard mapping, use the 'eyeball' icon to check).
 
-1.  Launch the **Azure Migrate appliance configuration wizard** using the shortcut available on the desktop (Wait for a minute or two, the browser will open showing the Azure Migrate appliance configuration wizard)
+1.  Launch the **Azure Migrate appliance configuration wizard** using the shortcut available on the desktop (wait for a minute or two, the browser will open showing the Azure Migrate appliance configuration wizard)
 
     ![Screenshot of the Azure Migrate appliance terms of use.](images/Exercise1/Migrateappliance.png "Desktop shortcut")
 
