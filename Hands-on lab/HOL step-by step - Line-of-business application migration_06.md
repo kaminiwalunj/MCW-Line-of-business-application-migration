@@ -75,11 +75,11 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
 7. In Hyper-V Manager, select **SMARTHOST{SUFFIX}**. You should now see the AzureMigrateAppliance VM and four VMs that comprise the on-premises SmartHotel application.
 
-    ![Screenshot of Hyper-V Manager on the SmartHotelHost, showing 4 VMs: smarthotelSQL1, smarthotelweb1, smarthotelweb2 and UbuntuWAF.](images/Exercise1/hyper-v1-2.png "Hyper-V Manager")
+    ![Screenshot of Hyper-V Manager on the SmartHotelHost, showing 4 VMs: smarthotelSQL1, smarthotelweb1, smarthotelweb2 and UbuntuWAF.](images/Exercise1/Hyperv1.png "Hyper-V Manager")
 
 8. In Hyper-V Manager, select the **AzureMigrateAppliance** VM, then select **Start** on the right if not already running.
 
-   ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](images/Exercise1/Start-AzureMigrateAppliance.png "Start AzureMigrateAppliance")
+   ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](images/Exercise1/Hyperv2.png "Start AzureMigrateAppliance")
 
 #### Task summary 
 
@@ -91,17 +91,15 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
 1.  In Hyper-V Manager, select the **AzureMigrateAppliance** VM, then select **Connect** on the right.
 
-    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](images/Exercise1/connect-AzureMigrateAppliance.png "Connect to AzureMigrateAppliance")
+    ![Screenshot of Hyper-V Manager showing the connect button for the Azure Migrate appliance.](images/Exercise1/Hyperv3.png "Connect to AzureMigrateAppliance")
 
 1.  Log in with the Administrator password **demo!pass123** (the login screen may pick up your local keyboard mapping, use the 'eyeball' icon to check).
 
-1. Open **Settings**, click on **Apps** and select **Default Apps** from the left hand side menu, scroll down and select **Internet Explorer** which is under **Web browser** then select **Google Chrome** from the list and click on **reset** then close Settings tab to set the **Chrome** as **Default Browser**.
-
-1.  Launch the **Azure Migrate appliance configuration wizard** using the shortcut available on the desktop. 
+1.  Launch the **Azure Migrate appliance configuration wizard** using the shortcut available on the desktop (Wait for a minute or two, the browser will open showing the Azure Migrate appliance configuration wizard)
 
     ![Screenshot of the Azure Migrate appliance terms of use.](images/Exercise1/Migrateappliance.png "Desktop shortcut")
 
-    On opening of the appliance configuration wizard, a pop-up with the license terms will appear. Accept the terms by selecting **I agree**.
+1.  On opening of the appliance configuration wizard, if a pop-up with the license terms appears, accept the terms by selecting **I agree**.
 
     ![Screenshot of the Azure Migrate appliance terms of use.](images/Exercise1/terms.png "Terms of use")
     
@@ -287,7 +285,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 9. From **Hyper-V Manager** console, select **smarthotelweb1** and select **Connect**.
 
-    ![Screenshot from Hyper-V manager highlighting the 'Connect' button for the smarthotelweb1 VM.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/hyper-v5.png?raw=true "Connect to smarthotelweb1")
+    ![Screenshot from Hyper-V manager highlighting the 'Connect' button for the smarthotelweb1 VM.](images/Exercise1/Hyperv4.png "Connect to smarthotelweb1")
 
 10. Select **Connect** again when prompted and log in to the **Administrator** account using the password **demo!pass123**.
 
