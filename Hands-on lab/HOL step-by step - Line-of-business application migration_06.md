@@ -80,6 +80,12 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 8. In Hyper-V Manager, select the **AzureMigrateAppliance** VM, then select **Start** on the right if not already running.
 
    ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](images/Exercise1/Hyperv2.png "Start AzureMigrateAppliance")
+   
+    >**Note**: If **AzureMigrateAppliance** VM is in **Saved** state, please follow the below instructions to start the vm.
+
+     1. Right click on the Azure Migrate appliance VM and select Upgrade Configuration version.
+	  1. On the pop-up, Select discard saved state and Upgrade
+	  1. Wait until all the updates are installed, then you can login to the vm using the password : demo!pass123
 
 #### Task summary 
 
