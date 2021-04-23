@@ -81,7 +81,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
    ![Screenshot of Hyper-V Manager showing the start button for the Azure Migrate appliance.](images/Exercise1/Hyperv2.png "Start AzureMigrateAppliance")
    
-    >**Note**: If **AzureMigrateAppliance** VM is in **Saved** state, please follow the below instructions to start the vm.
+    >**Note**: If you receive an error while starting the **AzureMigrateAppliance** VM, then you can check if vm is in Saved state. If yes, please follow the below instructions to start the vm.
 
      1. Right click on the Azure Migrate appliance VM and select Upgrade Configuration version.
 	  1. On the pop-up, Select discard saved state and Upgrade
