@@ -240,7 +240,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
   
     - Resource type: **Microsoft.Sql/servers**
   
-    - Resource: **Select SQL database server **smarthoteldb{SUFFIX}** from the dropdown which you created previously.
+    - Resource: Select SQL database server **smarthoteldb{SUFFIX}** from the dropdown which you created previously.
   
     - Target sub-resource: **sqlServer**
 
@@ -388,7 +388,7 @@ The schema migration will be carried out using an offline data migration activit
 
     ![Screenshot showing the 'New Activity' button within an Azure Database Migration Service project, with 'Offline data migration' selected from the drop-down.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration2.1.png?raw=true "New Activity - Offline data migration")
 
-1. The Migration Wizard is shown. Most settings are already populated from the existing migration project. At the **Select source** step, re-enter the source database password **demo!pass123**, then select **Next: *Select databases*.
+1. The Migration Wizard is shown. Most settings are already populated from the existing migration project. At the **Select source** step, re-enter the source database password **demo!pass123**, then select **Next: *Select databases***.
 
     ![Screenshot showing the 'Select source' step of the DMS Migration Wizard. The source database password is highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-3.png?raw=true "Select source")
 
