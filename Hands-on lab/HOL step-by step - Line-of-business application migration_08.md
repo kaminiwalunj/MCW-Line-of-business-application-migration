@@ -25,12 +25,12 @@ In this task you will create a new Azure Storage Account that will be used by Az
     - Storage account name: **migrationstorage{SUFFIX}**
   
     - Location: **IMPORTANT: Select the same location as your Azure SQL Database** (can be found in the Azure portal).
+    
+    - Performance: **Standard**
   
-    - Account kind: **Storage (general purpose v1)** (do not use a v2 account).
-  
-    - Replication: **Locally-redundant storage (LRS)**
+    - Redundancy: **Locally-redundant storage (LRS)**
 
-    ![Screenshot of the Azure portal showing the create storage account blade.](images/Exercise3/create-storage-2.png "Storage account settings")
+    ![Screenshot of the Azure portal showing the create storage account blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/Exercise3/create-storage-new.png?raw=true "Storage account settings")
 
 3. Select **Review + create**, then select **Create**.
 
