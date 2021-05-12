@@ -401,8 +401,6 @@ You will now deploy the Linux versions of the Microsoft Monitoring Agent and Dep
     ```
 
     ![Screenshot showing that the Dependency Agent install on Linux was successful.](images/Exercise1/da-linux-done.png "Dependency Agent installation was successful")
-
-32. The agent installation is now complete. Next, you need to generate some traffic on the SmartHotel application so the dependency visualization has some data to work with. From the **SmartHotelHostRG** resources group, naviagate to **Smarthost{SUFFIX}** VM and browse to the public IP address of the VM and spend a few minutes refreshing the page and checking guests in and out.
     
 #### Task summary 
 
