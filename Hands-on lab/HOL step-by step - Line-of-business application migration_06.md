@@ -272,7 +272,10 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
     ![Screenshot of the Azure Migrate 'Dependencies' blade, with the 'Configure OMS Workspace' button highlighted.](images/Exercise1/configure-oms-link.png "Configure OMS Workspace link")
 
-5. Create a new OMS workspace. Use **AzureMigrateWS{SUFFIX}** as the workspace name, Choose a workspace location close to your lab deployment, then select **Configure**.
+5. On the **Configure OMS workspace** blade, provide the below information and select **Configure**.
+
+    - OMS workspace: Enter **AzureMigrateWS{SUFFIX}**
+    - OMS workspace location: Select **East US** from the dropdown.
 
 
    ![Screenshot of the Azure Migrate 'Configure OMS workspace' blade.](images/Exercise1/configure-oms.png "OMS Workspace settings")
