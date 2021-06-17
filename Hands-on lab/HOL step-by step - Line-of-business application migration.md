@@ -159,14 +159,14 @@ In this task, you will deploy and configure the Azure Migrate appliance in the o
     ![Screenshot of the Azure Migrate 'Discover machines' blade, with Hyper-V selected.](images/Exercise1/h-v.png "Hyper-V virtualization option")
 
 2.  In **1: Generate Azure Migrate project key**, provide **SmartHotelAppl** as name for the Azure Migrate appliance that you will set up for discovery of Hyper-V VMs. Select **Generate key** to start the creation of the required Azure resources. 
+    >**Note**: If the Azure Migrate project key genration failed with error Vault name 'SmartHotekMigrxxxx' is already in use. In this case go to the Azure Migrate main page and create a **new project** with different name by following task 1 step 3 again.    
 
     ![Screenshot of the Azure Migrate 'Discover machines' blade showing the 'Generate Azure Migrate project key' section.](images/Exercise1/gen-key.png "Generate Azure Migrate project key")
-
+    
     >**Note**: If you are running this lab in a shared Azure Migrate project, you will need to provide an appliance name that is unique in the project. Append characters to the end of appliance name to make your appliance name unique. For example: **SmartHotelAppl123**.
 
 3.  **Wait** for the key to be generated, then copy the **Azure Migrate project key** to your clipboard.
-    >**Note**: If the Azure Migrate project key genration failed with error Vault name 'SmartHotekMigrxxxx' is already in use. In this case go to the Azure Migrate main page and create a **new project** with different name by following task 1 step 3 again. 
-   
+
     ![Screenshot of the Azure Migrate 'Discover machines' blade showing the Azure Migrate project key.](images/Exercise1/key.png "Azure Migrate project key")
 
 4.  Read through the instructions on how to download, deploy and configure the Azure Migrate appliance. Close the 'Discover machines' blade (do **not** download the .VHD file or .ZIP file, the .VHD has already been downloaded for you).
