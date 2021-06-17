@@ -56,7 +56,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
     ![](images/Exercise1/SP-Ex1t2s2.png)
 
 2.  In **1: Generate Azure Migrate project key**, provide **SmartHotelAppl** as name for the Azure Migrate appliance that you will set up for discovery of Hyper-V VMs. Select **Generate key** to start the creation of the required Azure resources. 
-    >**Note**: If the Azure Migrate project key genration failed with error Vault name 'SmartHotekMigrxxxx' is already in use. In this case go to the Azure Migrate main page and create a **new project** with different name, select that newly created project and generate teh key again.   
+    >**Note**: If the Azure Migrate project key genration failed with error Vault name 'SmartHotekMigrxxxx' is already in use. In this case go to the Azure Migrate main page and create a **new project** with different name, select that newly created project and generate the key again.   
 
     ![Screenshot of the Azure Migrate 'Discover machines' blade showing the 'Generate Azure Migrate project key' section.](images/Exercise1/gen-key.png "Generate Azure Migrate project key")
 
