@@ -53,7 +53,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
  
 2. Under **Are your machines virtualized?**, select **Yes, with Hyper-V** from the **drop-down** menu.
 
-    ![](images/Exercise1/SP-Ex1t2s2.png)
+    ![](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e1%20t2%20s2.png?raw=true)
 
 3.  In **1: Generate Azure Migrate project key**, provide **SmartHotelAppl** as name for the Azure Migrate appliance that you will set up for discovery of Hyper-V VMs. Select **Generate key** to start the creation of the required Azure resources. 
     >**Note**: If the Azure Migrate project key genration failed with error Vault name 'SmartHotekMigrxxxx' is already in use. In this case go to the Azure Migrate main page and create a **new project** with different name, select that newly created project and generate the key again.   
@@ -206,7 +206,7 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
 3. The **Assessment properties** blade allows you to tailor many of the settings used when making a migration assessment report. Take a few moments to explore the wide range of assessment properties. Hover over the information icons to see more details on each setting. Choose any settings you like, then select **Save**. (You have to make a change for the Save button to be enabled; if you don't want to make any changes, just close the blade.)
 
-    ![Screenshot of the Azure Migrate 'Assessment properties' blade, showing a wide range of migration assessment settings.](images/Exercise1/assessment-properties-v2.png "Assessment properties")
+    ![Screenshot of the Azure Migrate 'Assessment properties' blade, showing a wide range of migration assessment settings.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e1%20t4%20s3.png?raw=true "Assessment properties")
 
 4. Select **Next** to move to the **Select machines to assess** tab. Enter **SmartHotelAssessment** as the assessment name, choose **Create New** and enter the group name **SmartHotel VMs**. Select the **smarthotelweb1**, **smarthotelweb2** and **UbuntuWAF** VMs.
 
@@ -216,7 +216,7 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
 5. Select **Next**, followed by **Create assessment**. 
 
-    ![](images/Exercise1/assessment-create.png)
+    ![](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e1%20t4%20ss5.png?raw=true)
 
 6. On the **Windows, Linux and SQL Server** blade, select **Refresh** periodically until the number of assessments shown is **1**. This may take several minutes.
 
