@@ -22,9 +22,9 @@ In this task you will create a new Azure Storage Account that will be used by Az
   
     - Resource group: **AzureMigrateRG**
   
-    - Storage account name: **migrationstorage{SUFFIX}**
+    - Storage account name: **migrationstorage<inject key="DeploymentID" />**
   
-    - Location: **IMPORTANT: Select the same location as your Azure SQL Database** (can be found in the Azure portal).
+    - Location: **IMPORTANT: Select the same location as your Resource Group**.
     
     - Performance: **Standard**
   
@@ -58,7 +58,7 @@ You will also configure a private endpoint in this network to allow private, sec
   
     - Name: **SmartHotelVNet**
   
-    - Region: **IMPORTANT: Select the same location as your Azure SQL Database**.
+    - Region: **IMPORTANT: Select the same location as your Resource Group**.
 
     ![Screenshot of the Azure portal showing the create virtual network blade 'Basics' tab.](images/Exercise3/create-vnet-2.png "Create Virtual Network - Basics")
 
@@ -85,7 +85,7 @@ You will also configure a private endpoint in this network to allow private, sec
 
    ![Screenshot of the Azure portal showing the create virtual network blade 'IP Addresses' tab.](images/Exercise3/create-vnet-3.png "Create Virtual Network - IP Addresses")
 
-4. Navigate to the **SmartHotelDBRG** resource group, and then to the database server. Under **Security**, select **Private endpoint connections**, then select **+ Private endpoint**.
+4. Navigate to the **SmartHotelDBRG** resource group, and then to the SmartHoteldb<inject key="DeploymentID" /> database server. Under **Security**, select **Private endpoint connections**, then select **+ Private endpoint**.
 
 5. On the **Basics** tab, enter the following configuration then select **Next: Resource**:
 
@@ -93,7 +93,7 @@ You will also configure a private endpoint in this network to allow private, sec
   
     - Name: **SmartHotel-DB-Endpoint**
   
-    - Region: **Select the same location as the SmartHotelVNet**.
+    - Region: **Select the same location as the Resource Group**.
   
     ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](images/Exercise3/private-endpoint-1-1.png "Create a Private Endpoint - Basics")
 
@@ -105,7 +105,7 @@ You will also configure a private endpoint in this network to allow private, sec
   
     - Resource type: **Microsoft.Sql/servers**
   
-    - Resource: **Your SQL database server**.
+    - Resource: **SmartHoteldb<inject key="DeploymentID" />**.
   
     - Target sub-resource: **sqlServer**
 
@@ -155,7 +155,9 @@ In this task, you will register your Hyper-V host with the Azure Migrate: Server
 
     ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](images/Exercise3/discover-1-2.png "Azure Migrate: Server Migration - Discover")
 
-2. In the **Discover machines** panel, under **Are your machines virtualized**, select **Yes, with Hyper-V**. Under **Target region** enter **the same region as used for your Azure SQL Database** which can be found in the Azure portal and check the confirmation checkbox. Select **Create resources** to begin the deployment of the Azure Site Recovery resource used by Azure Migrate: Server Migration for Hyper-V migrations.
+2. In the **Discover machines** panel,
+   - under **Are your machines virtualized**, select **Yes, with Hyper-V**.
+   - Under **Target region** the region is automatically selected as same the Resource Group region.
 
     ![Screenshot of the Azure portal showing the 'Discover machines' panel from Azure Migrate.](images/Exercise3/discover-2.png "Discover machines - source hypervisor and target region")
 
@@ -380,7 +382,7 @@ On the migrated VM **smarthotelweb2**, this configuration needs to be updated to
 
     ![Screenshot showing the Azure Bastion connection blade.](images/Exercise3/web2-connect.png "Connect using Bastion")
 
-4. In the **smarthotelweb2** remote desktop session, open Windows Explorer and navigate to the **C:\\inetpub\\SmartHotel.Registration.Wcf** folder. Double-select the **Web.config** file and open with Notepad.
+4. In the **smarthotelweb2** remote desktop session, open File Explorer and navigate to the **C:\\inetpub\\SmartHotel.Registration.Wcf** folder. Double-select the **Web.config** file and open with Notepad.
 
 5. Update the **DefaultConnection** setting to connect to your Azure SQL Database.
 
