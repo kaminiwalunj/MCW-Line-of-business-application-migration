@@ -96,6 +96,8 @@ You will also configure a private endpoint in this network to allow private, sec
     - Region: **Select the same location as the Resource Group**.
   
     ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](images/Exercise3/private-endpoint-1-1.png "Create a Private Endpoint - Basics")
+    
+    Select **confirm** and select **Review and Create**.
 
 6.  On the **Resource** tab, enter the following configuration then select **Next: Configuration**:
 
@@ -157,9 +159,9 @@ In this task, you will register your Hyper-V host with the Azure Migrate: Server
 
 2. In the **Discover machines** panel,
    - under **Are your machines virtualized**, select **Yes, with Hyper-V**.
-   - Under **Target region** the region is automatically selected as same the Resource Group region.
+   - Under **Target region** the region is automatically selected as same the Resource Group's region.
 
-    ![Screenshot of the Azure portal showing the 'Discover machines' panel from Azure Migrate.](images/Exercise3/discover-2.png "Discover machines - source hypervisor and target region")
+    ![Screenshot of the Azure portal showing the 'Discover machines' panel from Azure Migrate.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t3%20s3.png?raw=true "Discover machines - source hypervisor and target region")
 
     Once deployment is complete, the 'Discover machines' panel should be updated with additional instructions.
   
@@ -230,7 +232,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
     ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines are selected.](images/Exercise3/replicate-4.png "Replicate - Virtual machines")
 
-5. In the **Target settings** tab, select your subscription and the existing **SmartHotelRG** resource group. Under **Replication storage account** select the **migrationstorageSUFFIX** storage account and under **Virtual Network** select **SmartHotelVNet**. Under **Subnet** select **SmartHotel**. Select **Next**.
+5. In the **Target settings** tab, select your subscription and the existing **SmartHotelRG** resource group. Under **Replication storage account** select the **migrationstorage<inject key="DeploymentID" />** storage account and under **Virtual Network** select **SmartHotelVNet**. Under **Subnet** select **SmartHotel**. Select **Next**.
 
     ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](images/Exercise3/replicate-5.png "Replicate - Target settings")
 
@@ -306,7 +308,7 @@ In this task you will perform a migration of the UbuntuWAF, smarthotelweb1, and 
 
 2. On the **Migrate** blade, select **yes** for **Shutdown machines before migration to minimum data loss** and select the 3 virtual machines then select **Migrate** to start the migration process.
 
-    ![Screenshot of the 'Migrate' blade, with 3 machines selected and the 'Migrate' button highlighted.](images/Exercise3/migrate-2.png "Migrate - VM selection")
+    ![Screenshot of the 'Migrate' blade, with 3 machines selected and the 'Migrate' button highlighted.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t6%20ss2.png?raw=true "Migrate - VM selection")
 
     > **Note**: You can optionally choose whether the on-premises virtual machines should be automatically shut down before migration to minimize data loss. Either setting will work for this lab.
 
@@ -394,7 +396,7 @@ On the migrated VM **smarthotelweb2**, this configuration needs to be updated to
 
     > **Note:** You may need to open the clipboard panel on the left-hand edge of the Bastion window, paste the connection string there, and then paste into the VM.
 
-    Set the password in the connection string to **demo!pass123**.
+    Set the password in the connection string to **<inject key="SmartHotelHost Admin Password" />**.
 
     ![Screenshot showing the user ID and Password in the web.config database connection string.](images/Exercise3/web2-connection-string.png "web.config")
 
@@ -458,7 +460,7 @@ In this task you will install the Azure Virtual Machine Agent (VM Agent) on your
 > In this lab, you will install the VM agent on the Azure VMs after migration. Alternatively, you could instead install the agent on the VMs in Hyper-V before migration.
 
 1. In the Azure portal, locate the **smarthotelweb1** VM and select **Connect**. Select **Bastion** from the available options and click on **Use Bastion**.
-Log in to the **Administrator** account using password **demo!pass123** (use the 'eyeball' to check the password was entered correctly with your local keyboard mapping).
+Log in to the **Administrator** account using password **<inject key="SmartHotelHost Admin Password" />** (use the 'eyeball' to check the password was entered correctly with your local keyboard mapping).
 
 2. Open a web browser and download the VM Agent from:
 
@@ -476,7 +478,7 @@ Log in to the **Administrator** account using password **demo!pass123** (use the
 
 You will now install the Linux version of the Azure VM Agent on the Ubuntu VM. All Linux distributions supports by Azure have integrated the Azure VM Agent into their software repositories, making installation easy in most cases.
 
-5. In the Azure portal, locate the **UbuntuWAF** VM and **Connect** to the VM using Azure Bastion, with the user name **demouser** and password **demo!pass123**. Since this is a Linux VM, Bastion will create an SSH session. You may need to enter the credentials again. 
+5. In the Azure portal, locate the **UbuntuWAF** VM and **Connect** to the VM using Azure Bastion, with the user name **demouser** and password **<inject key="SmartHotelHost Admin Password" />**. Since this is a Linux VM, Bastion will create an SSH session. You may need to enter the credentials again. 
  
 6. In the SSH session, enter the following command:
 
@@ -484,7 +486,7 @@ You will now install the Linux version of the Azure VM Agent on the Ubuntu VM. A
     sudo apt-get install walinuxagent
     ```
 
-    When prompted, enter the password **demo!pass123**. At the *Do you want to continue?* prompt, type **Y** and press **Enter**.
+    When prompted, enter the password **<inject key="SmartHotelHost Admin Password" />**. At the *Do you want to continue?* prompt, type **Y** and press **Enter**.
 
     **Note**: You may need to open the clipboard panel on the left-hand edge of the Bastion window, paste the command, and then paste into the VM.
 
