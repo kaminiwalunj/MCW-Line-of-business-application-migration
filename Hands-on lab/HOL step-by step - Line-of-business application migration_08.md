@@ -230,7 +230,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
     ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines are selected.](images/Exercise3/replicate-4.png "Replicate - Virtual machines")
 
-5. In the **Target settings** tab, select the below information,
+5. On the **Target settings** tab, select the below information,
    - Select your subscription and the existing **SmartHotelRG** resource group. 
    - **Replication storage account**: Select the **migrationstorage<inject key="DeploymentID" enableCopy="false" />** storage account.
    - **Virtual Network**: Select **SmartHotelVNet**. 
@@ -241,7 +241,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
     > **Note:** For simplicity, in this lab you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
 
-6. In the **Compute** tab, select the below configuration,
+6. On the **Compute** tab, select the below configuration,
    - Select the **Standard_F2s_v2** VM size for each virtual machine. 
    - Select the **Windows** operating system for the **smarthotelweb1**, **smarthotelweb2** virtual machines.
    - Select the **Linux** operating system for the **UbuntuWAF** virtual machine. 
