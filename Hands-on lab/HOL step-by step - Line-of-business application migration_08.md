@@ -22,15 +22,15 @@ In this task you will create a new Azure Storage Account that will be used by Az
   
     - Resource group: **AzureMigrateRG**
   
-    - Storage account name: **migrationstorage<inject key="DeploymentID" />**
+    - Storage account name: **migrationstorage<inject key="DeploymentID" enableCopy="false" />**
   
-    - Location: **IMPORTANT: Select the same location as your Resource Group**.
+    - Location: **IMPORTANT: Select the same region as the Resource Group**.
     
     - Performance: **Standard**
   
     - Redundancy: **Locally-redundant storage (LRS)**
 
-    ![Screenshot of the Azure portal showing the create storage account blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/Exercise3/create-storage-new.png?raw=true "Storage account settings")
+    ![Screenshot of the Azure portal showing the create storage account blade.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t1%20s2.png?raw=true "Storage account settings")
 
 3. Select **Review + create**, then select **Create**.
 
@@ -60,7 +60,7 @@ You will also configure a private endpoint in this network to allow private, sec
   
     - Region: **IMPORTANT: Select the same location as your Resource Group**.
 
-    ![Screenshot of the Azure portal showing the create virtual network blade 'Basics' tab.](images/Exercise3/create-vnet-2.png "Create Virtual Network - Basics")
+    ![Screenshot of the Azure portal showing the create virtual network blade 'Basics' tab.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t2%20s2.png?raw=true "Create Virtual Network - Basics")
 
 3. Select **Next: IP Addresses >**, and enter the following configuration. Then select **Review + create**, then **Create**.
 
@@ -85,7 +85,7 @@ You will also configure a private endpoint in this network to allow private, sec
 
    ![Screenshot of the Azure portal showing the create virtual network blade 'IP Addresses' tab.](images/Exercise3/create-vnet-3.png "Create Virtual Network - IP Addresses")
 
-4. Navigate to the **SmartHotelDBRG** resource group, and then to the SmartHoteldb<inject key="DeploymentID" /> database server. Under **Security**, select **Private endpoint connections**, then select **+ Private endpoint**.
+4. Navigate to the **SmartHotelDBRG** resource group, and then to the **SmartHoteldb<inject key="DeploymentID" enableCopy="false" />** database server. Under **Security**, select **Private endpoint connections**, then select **+ Private endpoint**.
 
 5. On the **Basics** tab, enter the following configuration then select **Next: Resource**:
 
@@ -95,7 +95,7 @@ You will also configure a private endpoint in this network to allow private, sec
   
     - Region: **Select the same location as the Resource Group**.
   
-    ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](images/Exercise3/private-endpoint-1-1.png "Create a Private Endpoint - Basics")
+    ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t2%20s5.png?raw=true "Create a Private Endpoint - Basics")
     
     Select **confirm** and select **Review and Create**.
 
@@ -107,7 +107,7 @@ You will also configure a private endpoint in this network to allow private, sec
   
     - Resource type: **Microsoft.Sql/servers**
   
-    - Resource: **SmartHoteldb<inject key="DeploymentID" />**.
+    - Resource: **SmartHoteldb<inject key="DeploymentID" enableCopy="false" />**.
   
     - Target sub-resource: **sqlServer**
 
@@ -232,13 +232,23 @@ In this task, you will configure and enable the replication of your on-premises 
 
     ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines are selected.](images/Exercise3/replicate-4.png "Replicate - Virtual machines")
 
-5. In the **Target settings** tab, select your subscription and the existing **SmartHotelRG** resource group. Under **Replication storage account** select the **migrationstorage<inject key="DeploymentID" />** storage account and under **Virtual Network** select **SmartHotelVNet**. Under **Subnet** select **SmartHotel**. Select **Next**.
+5. In the **Target settings** tab, enter the information below,
+   - select your subscription and the existing **SmartHotelRG** resource group. 
+   - Under **Replication storage account** select the **migrationstorage<inject key="DeploymentID" enableCopy="false" />** storage account.
+   - under **Virtual Network** select **SmartHotelVNet**. 
+   - Under **Subnet** select **SmartHotel**. Select **Next**.
+ 
 
     ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](images/Exercise3/replicate-5.png "Replicate - Target settings")
 
     > **Note:** For simplicity, in this lab you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
 
-6. In the **Compute** tab, select the **Standard_F2s_v2** VM size for each virtual machine. Select the **Windows** operating system for the **smarthotelweb1**, **smarthotelweb2** virtual machines and the **Linux** operating system for the **UbuntuWAF** virtual machine. Select **Next**. 
+6. In the **Compute** tab, select the configuration below,
+   - select the **Standard_F2s_v2** VM size for each virtual machine. 
+   - Select the **Windows** operating system for the **smarthotelweb1**, **smarthotelweb2** virtual machines.
+   - Select the **Linux** operating system for the **UbuntuWAF** virtual machine. 
+   - Select **Next**. 
+
 
     ![Screenshot of the 'Compute' tab of the 'Replicate' wizard in Azure Migrate Server Migration. Each VM is configured to use a Standard_F2s_v2 SKU, and has the OS Type specified.](images/Exercise3/replicate-6.png "Replicate - Compute")
 
