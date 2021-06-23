@@ -34,7 +34,7 @@ In this task you will create a new Azure SQL database to migrate the on-premises
   
         - Location: **IMPORTANT: Select the same region as the resource group - this makes migration faster.**
 
-    > **Note**: You can verify the location by opening another browser tab, navigating to https://portal.azure.com and selecting Virtual Machines on the left navigation. Use the same region as the **SmartHost<inject key="DeploymentID" enableCopy="false" />** virtual machine.
+    > **Note**: You can verify the location by navigating to `https://portal.azure.com` in the new browser tab, and then selecting the resource group from the left navigation menu.
 
    ![Screenshot from the Azure portal showing the New server blade (when creating a SQL database).](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e2%20t1%20s3.png?raw=true "Create Server for SQL Database")
 
@@ -113,33 +113,37 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
 
     ![Screenshot showing the Azure Migrate Overview blade in the Azure portal, with the 'Assess and migrate databases' button highlighted.](images/Exercise2/assess-migrate-db-2.png "Assess and migrate databases button")  
 
-2. Under **Assessment tools**, click on **Click here** link to add a tool, then select **Azure Migrate: Database Assessment**, then select **Add tool**
+2. Under **Assessment tools**, click on **Click here** link to add a tool.
 
    ![Screenshot showing the 'Select assessment tool' step of the 'Add a tool' wizard in Azure Migrate, with the 'Azure Migrate: Database Assessment' tool selected.](images/Exercise2/addtool-1-2.png "Add database assessment tool")
    
  > **Note**: Change the Project in the right hand top corner if you don't see the **Azure Migrate: Database Assessment** panel.
+
+3. Select **Azure Migrate: Database Assessment**, then select **Add tool**
     
    ![](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/addtool-2.png?raw=true)
    
 
-3. Under **Migration tool**, click on **Click here** link to add a tool, then select **Azure Migrate: Database Migration**, then select **Add tool**.
+4. Under **Migration tool**, click on **Click here** link to add a tool.
 
     ![Screenshot showing the 'Select assessment tool' step of the 'Add a tool' wizard in Azure Migrate, with the 'Azure Migrate: Database Migration' tool selected.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/addtool-3.png?raw=true "Add database migration tool")
     
-    ![](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/addtool-4.png?raw=true)
+5 .Select **Azure Migrate: Database Migration**, then select **Add tool**.
+    
+   ![](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/addtool-4.png?raw=true)
 
-4. Once the tools are installed in Azure Migrate, the portal should show the **Azure Migrate - SQL Server(only)** blade. 
+6. Once the tools are installed in Azure Migrate, the portal should show the **Azure Migrate - SQL Server(only)** blade. 
 
-5. From within **JumpVM**, open **Windows Explorer** and navigate to the **C:\\Program Files\\Microsoft Data Migration Assistant** folder. Open the **Dma.exe.config** file using Notepad. Search for **AzureMigrate** and remove the **\<\!-- and --\>** around the line setting the **EnableAssessmentUploadToAzureMigrate** key. **Save** the file and close Notepad when done.
+7. From within **JumpVM**, open **Windows Explorer** and navigate to the **C:\\Program Files\\Microsoft Data Migration Assistant** folder. Open the **Dma.exe.config** file using Notepad. Search for **AzureMigrate** and remove the **\<\!-- and --\>** around the line setting the **EnableAssessmentUploadToAzureMigrate** key. **Save** the file and close Notepad when done.
 
   ![Screenshot showing the Dma.exe.config setting enabling upload to Azure Migrate.](images/Exercise2/dma-enable-upload.png "Dma.exe.config file")
 
-6.  Launch **Microsoft Data Migration Assistant** using the desktop icon .
+8.  Launch **Microsoft Data Migration Assistant** using the desktop icon .
 
      ![Screenshot for installing Data Migration Assistant.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/dma5.png?raw=true "Data Migration Assistant")
   
 
-7.  In the Data Migration Assistant, select the **+ New** icon.  Fill in the project details as follows:
+9.  In the Data Migration Assistant, select the **+ New** icon.  Fill in the project details as follows:
 
     - Project type: **Assessment**
   
@@ -151,13 +155,13 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
   
     - Target server type: **Azure SQL Database**
      
-8. Select **Create** to create the project.
+10. Select **Create** to create the project.
 
     ![Screenshot showing the new DMA project creation dialog.](images/Exercise2/new-dma-assessment.png "New DMA assessment")
 
-9. On the **Options** tab select **Next**.
+11. On the **Options** tab select **Next**.
 
-10. On the **Select sources** page, in the **Connect to a server** dialog box, provide the connection details to the SQL Server, and then select **Connect**.
+12. On the **Select sources** page, in the **Connect to a server** dialog box, provide the connection details to the SQL Server, and then select **Connect**.
 
     - Server name: **192.168.0.6**
   
@@ -173,15 +177,15 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
 
     ![Screenshot showing the DMA connect to a server dialog.](images/Exercise2/connect-to-a-server.png "Connect to server")
 
-11. In the **Add sources** dialog box, select **SmartHotel.Registration**, then select **Add**.
+13. In the **Add sources** dialog box, select **SmartHotel.Registration**, then select **Add**.
 
     ![Screenshot of the DMA showing the 'Add sources' dialog.](images/Exercise2/add-sources.png "Add sources")
 
-12. Select **Start Assessment** to start the assessment. 
+14. Select **Start Assessment** to start the assessment. 
 
     ![Screenshot of the DMA showing assessment in progress.](images/Exercise2/assessment-in-progress.png "Start assessment")
 
-13. **Wait** for the assessment to complete, and review the results. The results should show two unsupported features, **Service Broker feature is not supported in Azure SQL Database** and **Azure SQL Database does not support EKM and Azure Key Vault integration**. For this migration, you can ignore these issues.
+15. **Wait** for the assessment to complete, and review the results. The results should show two unsupported features, **Service Broker feature is not supported in Azure SQL Database** and **Azure SQL Database does not support EKM and Azure Key Vault integration**. For this migration, you can ignore these issues.
 
     > **Note**: For Azure SQL Database, the assessments identify feature parity issues and migration blocking issues.
 
@@ -189,15 +193,15 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
 
     >- The Compatibility issues category identifies partially supported or unsupported features that reflect compatibility issues that might block migrating on-premises SQL Server database(s) to Azure SQL Database. Recommendations are also provided to help you address those issues.
 
-14. Select **Upload to Azure Migrate** to upload the database assessment to your Azure Migrate project (this button may take a few seconds to become enabled).
+16. Select **Upload to Azure Migrate** to upload the database assessment to your Azure Migrate project (this button may take a few seconds to become enabled).
 
     ![Screenshot of the DMA showing the assessment results and the 'Update to Azure Migrate' button.](images/Exercise2/db-upload-btn.png "Upload to Azure Migrate")
 
-15. On the **Connect to Azure** blade, select **Azure** from the dropdown on the right then select **Connect**. Enter your Azure credentials when prompted. Select your **Subscription** and **Azure Migrate Project** using the dropdowns, then select **Upload**. Once the upload is complete, select **OK** to dismiss the notification.
+17. On the **Connect to Azure** blade, select **Azure** from the dropdown on the right then select **Connect**. Enter your Azure credentials when prompted. Select your **Subscription** and **Azure Migrate Project** using the dropdowns, then select **Upload**. Once the upload is complete, select **OK** to dismiss the notification.
 
     ![Screenshot of the DMA showing the assessment results upload panel.](images/Exercise2/db-upload.png "Upload to Azure Migrate")
 
-16. Return to the **Azure Migrate - SQL Server(only)** blade in the Azure portal. Refreshing the page should now show the assessed database.
+18. Return to the **Azure Migrate - SQL Server(only)** blade in the Azure portal. Refreshing the page should now show the assessed database.
 
     ![Screenshot of the 'Azure Migrate - Databases' blade in the Azure portal, showing 1 assessed database.](images/Exercise2/db-assessed-2.png "Azure Migrate - Database Assessment")
 
@@ -271,43 +275,44 @@ We'll start by creating the private endpoint that allows the DMS to access the d
     ![Screenshot showing the DNS entry for the SQL database server private endpoint](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/dbendpoint1.png?raw=true "Private Endpoint")
 
 
-   On the **SmartHotel-DB-for-DMS** private endpoint blade, from the left hand side menu select **DNS configuration** which is under **Settings**
-.
-    ![Screenshot showing step 1 to find the DNS entry for the SQL database server private endpoint](images/Exercise2/private-endpoint-dns1.png "Find DNS for Private Endpoint")
+7. On the **SmartHotel-DB-for-DMS** private endpoint blade, from the left hand side menu select **DNS configuration** which is under **Settings**.
 
-   On the **SmartHotel-DB-for-DMS | DNS configuration**, select the **Private DNS Zone** **privatelink.database.windows.net**.
+   ![Screenshot showing step 1 to find the DNS entry for the SQL database server private endpoint](images/Exercise2/private-endpoint-dns1.png "Find DNS for Private Endpoint")
+
+8. On the **SmartHotel-DB-for-DMS | DNS configuration**, select the **Private DNS Zone** **privatelink.database.windows.net**.
 
    ![Screenshot showing step 2 to find the DNS entry for the SQL database server private endpoint](images/Exercise2/private-endpoint-dns2.png "Private DNS integration")
 
-   On the **privatelink.database.windows.net** overview blade, note that the **Record set** with name **smarthoteldb<inject key="DeploymentID" enableCopy="false" />** and an internal IP address **10.1.0.5** is listed.
+9. On the **privatelink.database.windows.net** overview blade, note that the **Record set** with name **smarthoteldb<inject key="DeploymentID" enableCopy="false" />** and an internal IP address **10.1.0.5** is listed.
 
    ![Screenshot showing step 3 to find the DNS entry for the SQL database server private endpoint](images/Exercise2/private-endpoint-dns3.png "Private Endpoint IP address")
 
    >**Note**: Private DNS is used so that the database domain name, **\<your server\>.database.windows.net** resolves to the internal private endpoint IP address **10.1.0.5** when resolved from the DMSvnet, but resolves to the Internet-facing IP address of the database server when resolved from outside the DMSvnet. This means the same connection string (which contains the domain name) can be used in both cases.
 
-7.  Return to the Database server blade. Under **Security**, select **Firewalls and virtual networks**. Set 'Deny public network access' to **Yes**, then **Save** your changes.
+10. Return to the Database server blade. Under **Security**, select **Firewalls and virtual networks**. Set 'Deny public network access' to **Yes**, then **Save** your changes.
 
-    ![Screenshot showing the link to add an existing virtual network to the SQL database network security settings.](images/Exercise2/db-network.png "Database Server - Firewalls and virtual networks")
+   ![Screenshot showing the link to add an existing virtual network to the SQL database network security settings.](images/Exercise2/db-network.png "Database Server - Firewalls and virtual networks")
  In the Azure portal, navigate to the **SmartHotelDBRG** resource group, and then to the database server **smarthoteldb<inject key="DeploymentID" enableCopy="false" />**. From the Oveview page, copy the server name of the database and keep this in a text editor as we will be using this further.
 
-8. Check that the Database Migration Service resource you created in task 3 has completed provisioning. You can check the deployment status from the **Deployments** pane in the **AzureMigrateRG** resource group blade.
+11. Check that the Database Migration Service resource you created in task 3 has completed provisioning. You can check the deployment status from the **Deployments** pane in the **AzureMigrateRG** resource group blade.
 
     ![Screenshot showing the AzureMigrateRG - Deployments blade in the Azure portal. The Microsoft.AzureDMS deployment shows status 'Successful'.](images/Exercise2/dms-deploy.png "DMS deployment complete")
 
-9. Navigate to the Database Migration Service **SmartHotelDBMigration** resource blade in the **AzureMigrateRG** resource group and select **+ New Migration Project**.
+12. Navigate to the Database Migration Service **SmartHotelDBMigration** resource blade in the **AzureMigrateRG** resource group and select **+ New Migration Project**.
 
     ![Screenshot showing the Database Migration Service blade in the Azure portal, with the 'New Migration Project' button highlighted.](images/Exercise2/new-dms-project.png "New DMS migration project")
  
-10. In the **New migration project** blade, enter the information below,
-    - enter **DBMigrate** as the project name. 
-    - Leave the source server type as **SQL Server** and target server type as **Azure SQL Database**. 
-    - Select **Choose type of activity** and select **Create project only**. 
-    - Select **Save** then select **Create**.
+13. In the **New migration project** blade, enter the below information,
+
+    - Project name : Enter DBMigrate 
+    - Leave the source server type as SQL Server and target server type as Azure SQL Database.
+    - Choose type of activity : Select Create project only from the dropdown
+    - Select **Create**.
  
 
     ![Screenshot showing the Database Migration Service blade in the Azure portal, with the 'New Migration Project' button highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-1.png?raw=true "DMS migration project - settings")
 
-11. The Migration Wizard opens, showing the **Select source** step. Complete the settings as follows, then select **Next: Select databases**.
+14. The Migration Wizard opens, showing the **Select source** step. Complete the settings as follows, then select **Next: Select databases**.
 
     - Source SQL Server instance name: **10.0.0.4**
   
@@ -327,11 +332,11 @@ We'll start by creating the private endpoint that allows the DMS to access the d
     >
     > The Hyper-V host is accessed via its private IP address (10.0.0.4). The DMS service accesses this IP address over the peering connection between the DMS VNet and the SmartHotelHost VNet. This simulates a VPN or ExpressRoute connection between a DMS VNet and an on-premises network.
 
-12. In the **Select databases** step, the **Smarthotel.Registration** database should already be selected. Select **Next: Select target**.
+15. In the **Select databases** step, the **Smarthotel.Registration** database should already be selected. Select **Next: Select target**.
 
     ![Screenshot showing the 'Select databases' step of the DMS Migration Wizard.](images/Exercise2/select-databases.png "DMS project - Select databases")
 
-13. Complete the **Select target** step as follows, then select **Next: Summary**:
+16. Complete the **Select target** step as follows, then select **Next: Summary**:
 
     - Target server name: **Paste the server name value you copied earlier, {something}.database.windows.net**.
   
@@ -349,7 +354,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 
     ![Screenshot showing the Azure SQL Database server name.](images/Exercise2/sql-db-name.png "SQL database server name")
 
-14. At the **Project summary** step, review the settings and select **Save project** to create the migration project.
+17. At the **Project summary** step, review the settings and select **Save project** to create the migration project.
 
     ![Screenshot showing the DMS project summary.](images/Exercise2/project-summary.png "DMS project - summary")
 
@@ -375,12 +380,12 @@ The schema migration will be carried out using a schema migration activity withi
 
     ![Screenshot showing the 'Select target' step of the DMS Migration Wizard. The target database password is highlighted.](images/Exercise2/select-target-pwd-only.png "Select target")
 
-4. At the **Select database and schema** step, select the configuration below,
-   - check that the **SmartHotel.Registration** database is selected. 
-   - Under **Target Database** select **smarthoteldb** and under **Schema Source** select **Generate from source**. 
+4. At the **Select database and schema** step, select the below information,
+   - Check that the SmartHotel.Registration database is selected.
+   - **Target Database**: Select **smarthoteldb**.
+   - **Schema Source**: Select **Generate from source**. 
    - Select **Next: Summary**.
  
-
     ![Screenshot showing the 'Select database and schema' step of the DMS Migration Wizard.](images/Exercise2/select-database-and-schema.png "Select database and schema")
 
 5. At the **Summary** step, enter **SchemaMigration** as the **Activity name**. Select **Start migration** to start the schema migration process.
@@ -417,14 +422,13 @@ The schema migration will be carried out using an offline data migration activit
 
     ![Screenshot showing the 'Select target' step of the DMS Migration Wizard. The target database password is highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-5.png?raw=true "Select target")
 
-5. At the **Map to target databases** step, check the **SmartHotel.Registration** database. Under **Target Database** select **smarthoteldb**. Select **Next: Configure migration settings**.
+5. At the **Map to target databases** step, check the **SmartHotel.Registration** database. Under **Target Database** select **smarthoteldb** from the dropdown and click on **Next: Configure migration settings**.
 
     ![Screenshot showing the 'Map to target databases' step of the DMS Migration Wizard.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-6.png?raw=true "Map to target databases")
 
-6. The **Configure migration settings** step allows you to specify which tables should have their data migrated. 
-   - **Expand** the **SmartHotel.Registration 2 of 2** option. 
-   - select the **Bookings** table (Make sure the **MigrationHistory** table is not checked).
-   -  select **Next: Summary**.
+6. On the **Configure migration settings** blade, **expand** the **SmartHotel.Registration 2 of 2** option and select the **Bookings** table (Make sure the **MigrationHistory** table is not checked). Then, click on **Next: Summary**.
+
+   > Note: The Configure migration settings step allows you to specify which tables should have their data migrated.
   
 
     ![Screenshot from DMS showing tables being selected for replication.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-7.png?raw=true "Configure migration settings - select tables")
