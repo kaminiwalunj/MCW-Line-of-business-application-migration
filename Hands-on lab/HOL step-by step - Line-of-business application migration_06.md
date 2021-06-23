@@ -31,7 +31,7 @@ In this task, you will and select the assessment and migration tools, the Azure 
 
     ![](images/Exercise1/project-change.png)
 
-6. Select your **subscription** and select existing project named **SmartHotelMigration<inject key="DeploymentID" />**. Then select **Ok**.
+6. Select your **subscription** and select existing project named **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />**. Then select **Ok**.
 
     ![](images/Exercise1/project-select.png)
 
@@ -53,7 +53,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
  
 2. Under **Are your machines virtualized?**, select **Yes, with Hyper-V** from the **drop-down** menu.
 
-    ![](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e1%20t2%20s2.png?raw=true)
+    ![](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/SP-Ex1t2s2.png?raw=true)
 
 3.  In **1: Generate Azure Migrate project key**, provide **SmartHotelAppl** as name for the Azure Migrate appliance that you will set up for discovery of Hyper-V VMs. Select **Generate key** to start the creation of the required Azure resources. 
     >**Note**: If the Azure Migrate project key genration failed with error Vault name 'SmartHotekMigrxxxx' is already in use. In this case go to the Azure Migrate main page and create a **new project** with different name, select that newly created project and generate the key again.   
@@ -74,7 +74,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
      ![Screenshot of Hyper-V Manager, with the 'Hyperv Manager' action highlighted.](images/Exercise1/hyper-v-manager.png "Hyperv Manager")
 
-7. In Hyper-V Manager, select **SMARTHOST<inject key="DeploymentID" />**. You should now see the AzureMigrateAppliance VM and four VMs that comprise the on-premises SmartHotel application.
+7. In Hyper-V Manager, select **SMARTHOST<inject key="DeploymentID" enableCopy="false" />**. You should now see the AzureMigrateAppliance VM and four VMs that comprise the on-premises SmartHotel application.
 
     ![Screenshot of Hyper-V Manager on the SmartHotelHost, showing 4 VMs: smarthotelSQL1, smarthotelweb1, smarthotelweb2 and UbuntuWAF.](images/Exercise1/Hyperv1.png "Hyper-V Manager")
 
@@ -85,8 +85,8 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
     >**Note**: If you receive an error while starting the **AzureMigrateAppliance** VM, then you can check if vm is in Saved state. If yes, please follow the below instructions to start the vm.
 
      1. Right click on the Azure Migrate appliance VM and select Upgrade Configuration version.
-	  1. On the pop-up, Select discard saved state and Upgrade
-	  1. Wait until all the updates are installed, then you can login to the vm using the password : demo!pass123
+	  2. On the pop-up, Select discard saved state and Upgrade
+	  3. Wait until all the updates are installed, then you can login to the vm using the password : demo!pass123
 
 #### Task summary 
 
@@ -159,7 +159,7 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' button.](images/Exercise1/add-disc1.png "Add discovery source")
 
-13. Select **Add single item**, select **hostlogin** as the friendly name, and enter **SmartHost<inject key="DeploymentID" />** under 'IP Address / FQDN'.
+13. Select **Add single item**, select **hostlogin** as the friendly name, and enter **SmartHost<inject key="DeploymentID" enableCopy="false" />** under 'IP Address / FQDN'.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' panel.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/discoverysource-1.png?raw=true "Discovery source - SmartHotelHost")
 
@@ -274,13 +274,13 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 5. On the **Configure OMS workspace** blade, provide the below information and select **Configure**.
 
-    - OMS workspace: Enter **AzureMigrateWS<inject key="DeploymentID" />**
+    - OMS workspace: Enter **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" />**
     - OMS workspace location: Select **East US** from the dropdown.
 
 
    ![Screenshot of the Azure Migrate 'Configure OMS workspace' blade.](images/Exercise1/configure-oms.png "OMS Workspace settings")
 
-6. Wait for the workspace to be deployed. Once it is deployed, navigate to **AzureMigrateWS<inject key="DeploymentID" />** by clicking on it.
+6. Wait for the workspace to be deployed. Once it is deployed, navigate to **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" />** by clicking on it.
 
      ![Screenshot of the Azure Migrate 'Configure OMS workspace' blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/omsworkspace.png?raw=true "OMS Workspace settings")
 
