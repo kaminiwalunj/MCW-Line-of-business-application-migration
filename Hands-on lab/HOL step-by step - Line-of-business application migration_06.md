@@ -159,7 +159,7 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' button.](images/Exercise1/add-disc1.png "Add discovery source")
 
-13. Select **Add single item**, select **hostlogin** as the friendly name, and enter **SmartHost<inject key="DeploymentID" enableCopy="false" />** under 'IP Address / FQDN'.
+13. Click on **Add single item**, select **hostlogin** as the friendly name, and under 'IP Address / FQDN', enter **SmartHost<inject key="DeploymentID" enableCopy="false" />**.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' panel.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/discoverysource-1.png?raw=true "Discovery source - SmartHotelHost")
 
@@ -208,13 +208,13 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
     ![Screenshot of the Azure Migrate 'Assessment properties' blade, showing a wide range of migration assessment settings.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e1%20t4%20s3.png?raw=true "Assessment properties")
 
-4. Select **Next** to move to the **Select machines to assess** tab. Enter **SmartHotelAssessment** as the assessment name, choose **Create New** and enter the group name **SmartHotel VMs**. Select the **smarthotelweb1**, **smarthotelweb2** and **UbuntuWAF** VMs.
+4. Select **Next** to move to the **Select machines to assess** tab. Enter **SmartHotelAssessment** as the assessment name, choose **Create New** and enter the group name **SmartHotel VMs**. Select the **smarthotelweb1**, **smarthotelweb2** and **UbuntuWAF** VMs. Click on **Next**.
 
     ![Screenshot of the Azure Migrate 'Assess servers' page. A new server group containing servers smarthotelweb1, smarthotelweb2, and UbuntuWAF.](images/Exercise1/assessment-vms-v2.png "Assessment VM group")
 
     **Note:** There is no need to include the **smarthotelSQL1** or **AzureMigrateAppliance** VMs in the assessment, since they will not be migrated to Azure. (The SQL Server will be migrated to the SQL Database service and the Azure Migrate Appliance is only used for migration assessment.)
 
-5. Select **Next**, followed by **Create assessment**. 
+5. Click on **Create assessment** to create the assessment. 
 
     ![](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e1%20t4%20ss5.png?raw=true)
 
