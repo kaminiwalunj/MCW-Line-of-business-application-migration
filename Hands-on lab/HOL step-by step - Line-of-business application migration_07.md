@@ -26,17 +26,17 @@ In this task you will create a new Azure SQL database to migrate the on-premises
   
     - Server: Select **Create new** and fill in the New server blade as follows then select **OK**:
   
-        - Server name: **smarthoteldb<inject key="DeploymentID" />**
+        - Server name: **smarthoteldb<inject key="DeploymentID" enableCopy="false" />**
   
         - Server admin login: **demouser**
   
         - Password: **<inject key="SmartHotelHost Admin Password" />**
   
-        - Location: **IMPORTANT: Select the same region as resource group - this makes migration faster.**
+        - Location: **IMPORTANT: Select the same region as the resource group - this makes migration faster.**
 
-    > **Note**: You can verify the location by opening another browser tab, navigating to https://portal.azure.com and selecting Virtual Machines on the left navigation. Use the same region as the **SmartHost<inject key="DeploymentID" />** virtual machine.
+    > **Note**: You can verify the location by opening another browser tab, navigating to https://portal.azure.com and selecting Virtual Machines on the left navigation. Use the same region as the **SmartHost<inject key="DeploymentID" enableCopy="false" />** virtual machine.
 
-   ![Screenshot from the Azure portal showing the New server blade (when creating a SQL database).](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/dbserver.png?raw=true "Create Server for SQL Database")
+   ![Screenshot from the Azure portal showing the New server blade (when creating a SQL database).](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e2%20t1%20s3.png?raw=true "Create Server for SQL Database")
 
     - Want to use SQL elastic pool?: **No**
   
@@ -50,7 +50,7 @@ In this task you will create a new Azure SQL database to migrate the on-premises
 
  The final screenshot will look like this:
 
-   ![Screenshot from the Azure portal showing the Create SQL Database blade.](images/Exercise2/new-db.png "Create SQL Database")
+   ![Screenshot from the Azure portal showing the Create SQL Database blade.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e2%20t1%20s33.png?raw=true "Create SQL Database")
 
 
 4. Select **Next: Networking >** to move to the **Networking** tab. Confirm that **No access** is selected.
@@ -85,13 +85,13 @@ In this task you will create an Azure Database Migration Service resource. This 
   
     - Service Name: **SmartHotelDBMigration**
   
-    - Location: **Choose the same region as the SmartHotel host**.
+    - Location: **Choose the same region as the Resource Group**.
 
     - Service mode: **Azure**
   
     - Pricing tier: **Standard: 1 vCore**
 
-    ![Screenshot showing the Create DMS 'Basics' tab.](images/Exercise2/create-dms.png "Create DMS - Basics")
+    ![Screenshot showing the Create DMS 'Basics' tab.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e2%20t2%20s3.png?raw=true "Create DMS - Basics")
 
 4. Select **Next: Networking** to move to the **Networking** tab, and select the **DMSvnet/DMS** virtual network and subnet in the **SmartHotelHostRG** resource group.
    
@@ -213,11 +213,16 @@ In subsequent tasks, you will use this project to migrate both the database sche
 
 We'll start by creating the private endpoint that allows the DMS to access the database server.
 
-1. In the Azure portal, expand the portal's left navigation by selecting **Show portal menu** in the top left, then select **Resource groups**. Select **SmartHotelDBRG** resource group, then the database server **smarthoteldb<inject key="DeploymentID" />**.
+1. In the Azure portal, expand the portal's left navigation by selecting **Show portal menu** in the top left, then select **Resource groups**. 
+ 
 
    ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/db1.png?raw=true "New SQL Database")
+   
+   - Select the **SmartHotelDBRG** resource group,
 
    ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/db2.png?raw=true "New SQL Database")
+   
+   - Select the database server **smarthoteldb<inject key="DeploymentID" enableCopy="false" />**.
 
    ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/db3.png?raw=true "New SQL Database")
 
@@ -231,7 +236,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
   
     - Name: **SmartHotel-DB-for-DMS**
   
-    - Region: **Select the same location as the Resource Group's location**.
+    - Region: **Select the same region as the Resource Group**.
   
     ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](images/Exercise2/private-endpoint-1.png "Private Endpoint - Basics")
 
@@ -243,7 +248,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
   
     - Resource type: **Microsoft.Sql/servers**
   
-    - Resource: Select SQL database server **smarthoteldb<inject key="DeploymentID" />** from the dropdown which you created previously.
+    - Resource: Select SQL database server **smarthoteldb<inject key="DeploymentID" enableCopy="false" />** from the dropdown which you created previously.
   
     - Target sub-resource: **sqlServer**
 
@@ -274,7 +279,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 
    ![Screenshot showing step 2 to find the DNS entry for the SQL database server private endpoint](images/Exercise2/private-endpoint-dns2.png "Private DNS integration")
 
-   On the **privatelink.database.windows.net** overview blade, note that the **Record set** with name **smarthoteldb{SUFFIX}** and an internal IP address **10.1.0.5** is listed.
+   On the **privatelink.database.windows.net** overview blade, note that the **Record set** with name **smarthoteldb<inject key="DeploymentID" enableCopy="false" />** and an internal IP address **10.1.0.5** is listed.
 
    ![Screenshot showing step 3 to find the DNS entry for the SQL database server private endpoint](images/Exercise2/private-endpoint-dns3.png "Private Endpoint IP address")
 
@@ -283,7 +288,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 7.  Return to the Database server blade. Under **Security**, select **Firewalls and virtual networks**. Set 'Deny public network access' to **Yes**, then **Save** your changes.
 
     ![Screenshot showing the link to add an existing virtual network to the SQL database network security settings.](images/Exercise2/db-network.png "Database Server - Firewalls and virtual networks")
- In the Azure portal, navigate to the **SmartHotelDBRG** resource group, and then to the database server **smarthoteldb<inject key="DeploymentID" />**. From the Oveview page, copy the server name of the database and keep this in a text editor as we will be using this further.
+ In the Azure portal, navigate to the **SmartHotelDBRG** resource group, and then to the database server **smarthoteldb<inject key="DeploymentID" enableCopy="false" />**. From the Oveview page, copy the server name of the database and keep this in a text editor as we will be using this further.
 
 8. Check that the Database Migration Service resource you created in task 3 has completed provisioning. You can check the deployment status from the **Deployments** pane in the **AzureMigrateRG** resource group blade.
 
@@ -293,7 +298,12 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 
     ![Screenshot showing the Database Migration Service blade in the Azure portal, with the 'New Migration Project' button highlighted.](images/Exercise2/new-dms-project.png "New DMS migration project")
  
-10. the **New migration project** blade, enter **DBMigrate** as the project name. Leave the source server type as **SQL Server** and target server type as **Azure SQL Database**. Select **Choose type of activity** and select **Create project only**. Select **Save** then select **Create**.
+10. In the **New migration project** blade, enter the information below,
+    - enter **DBMigrate** as the project name. 
+    - Leave the source server type as **SQL Server** and target server type as **Azure SQL Database**. 
+    - Select **Choose type of activity** and select **Create project only**. 
+    - Select **Save** then select **Create**.
+ 
 
     ![Screenshot showing the Database Migration Service blade in the Azure portal, with the 'New Migration Project' button highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-1.png?raw=true "DMS migration project - settings")
 
@@ -365,7 +375,11 @@ The schema migration will be carried out using a schema migration activity withi
 
     ![Screenshot showing the 'Select target' step of the DMS Migration Wizard. The target database password is highlighted.](images/Exercise2/select-target-pwd-only.png "Select target")
 
-4. At the **Select database and schema** step, check that the **SmartHotel.Registration** database is selected. Under **Target Database** select **smarthoteldb** and under **Schema Source** select **Generate from source**. Select **Next: Summary**.
+4. At the **Select database and schema** step, select the configuration below,
+   - check that the **SmartHotel.Registration** database is selected. 
+   - Under **Target Database** select **smarthoteldb** and under **Schema Source** select **Generate from source**. 
+   - Select **Next: Summary**.
+ 
 
     ![Screenshot showing the 'Select database and schema' step of the DMS Migration Wizard.](images/Exercise2/select-database-and-schema.png "Select database and schema")
 
@@ -407,7 +421,11 @@ The schema migration will be carried out using an offline data migration activit
 
     ![Screenshot showing the 'Map to target databases' step of the DMS Migration Wizard.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-6.png?raw=true "Map to target databases")
 
-6. The **Configure migration settings** step allows you to specify which tables should have their data migrated. **Expand** the **SmartHotel.Registration 2 of 2** option and select the **Bookings** table (Make sure the **MigrationHistory** table is not checked) and select **Next: Summary**.
+6. The **Configure migration settings** step allows you to specify which tables should have their data migrated. 
+   - **Expand** the **SmartHotel.Registration 2 of 2** option. 
+   - select the **Bookings** table (Make sure the **MigrationHistory** table is not checked).
+   -  select **Next: Summary**.
+  
 
     ![Screenshot from DMS showing tables being selected for replication.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-7.png?raw=true "Configure migration settings - select tables")
 
@@ -421,16 +439,22 @@ The schema migration will be carried out using an offline data migration activit
 
 As a final step, we will remove the private endpoint that allows the DMS service access to the database, since this access is no longer required.
 
-9.  In the Azure portal, expand the portal's left navigation by selecting **Show portal menu** in the top left, then select **Resource groups**. Select **SmartHotelDBRG** resource group, then the database server **smarthoteldb<inject key="DeploymentID" />**.
+9.  In the Azure portal, expand the portal's left navigation by selecting **Show portal menu** in the top left.
 
    ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/db1.png?raw=true "New SQL Database")
-
+   
+   - select **Resource groups**. Select **SmartHotelDBRG** resource group.
+   
    ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/db2.png?raw=true "New SQL Database")
+   
+   - Select the database server **smarthoteldb<inject key="DeploymentID" />**.
 
    ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/db3.png?raw=true "New SQL Database")
    
-   ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e2%20t6%20ss9.png?raw=true "New SQL Database")Under **Security**, select **Private endpoint connections**.
-
+   - Under **Security**, select **Private endpoint connections**.
+   
+   ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e2%20t6%20ss9.png?raw=true "New SQL Database")
+   
 10.  Select the **SmartHotel-DB-for-DMS** endpoint added earlier, and select **Remove**, followed by **Yes**.
 
     ![Screenshot from the SQL server showing the SmartHotel-DB-for-DMS private endpoint being removed.](images/Exercise2/private-endpoint-remove.png "Remove private endpoint")
