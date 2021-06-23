@@ -161,50 +161,48 @@ In this task, you will register your Hyper-V host with the Azure Migrate: Server
    - under **Are your machines virtualized**, select **Yes, with Hyper-V**.
    - Under **Target region** the region is automatically selected as same the Resource Group's region.
 
-    ![Screenshot of the Azure portal showing the 'Discover machines' panel from Azure Migrate.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t3%20s3.png?raw=true "Discover machines - source hypervisor and target region")
+    ![Screenshot of the Azure portal showing the 'Discover machines' panel from Azure Migrate.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t3%20s3%20discover-2.png?raw=true "Discover machines - source hypervisor and target region")
 
     Once deployment is complete, the 'Discover machines' panel should be updated with additional instructions.
   
-3. Copy the **Download** link for the Hyper-V replication provider software installer to your clipboard.
+3. Click on the **Download** link for the Hyper-V replication provider software installer to download the Azure Site Recovery provider installer.
 
-    ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link for the Hyper-V replication provider software installer.](images/Exercise3/discover-3.png "Replication provider download link")
+    ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link for the Hyper-V replication provider software installer.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t2%20s33.png?raw=true "Replication provider download link")
 
-4.  Open new browser tab and paste the link you copied earlier to download the Azure Site Recovery provider installer..
-
-5. Return to the **Discover machines** page in your browser and select the blue **Download** button and download the registration key file.
+4. Return to the **Discover machines** page in your browser and select the blue **Download** button and download the registration key file.
 
     ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](images/Exercise3/discover-4.png "Download registration key file")
 
 
-6. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off** and select **Next**. Accept the default installation location and select **Install**.
+5. Open the **AzureSiteRecoveryProvider.exe** installer you downloaded a moment ago. On the **Microsoft Update** tab, select **Off** and select **Next**. Accept the default installation location and select **Install**.
 
     ![Screenshot of the ASR provider installer.](images/Exercise3/asr-provider-install.png "Azure Site Recovery Provider Setup")
 
-7. When the installation has completed select **Register**. Browse to the location of the key file you downloaded. When the key is loaded select **Next**.
+6. When the installation has completed select **Register**. Browse to the location of the key file you downloaded. When the key is loaded select **Next**.
 
     ![Screenshot of the ASR provider registration settings.](images/Exercise3/asr-registration.png "Key file registration")
 
-8.  Select **Connect directly to Azure Site Recovery without a proxy server** and select **Next**. The registration of the Hyper-V host with Azure Site Recovery will begin.
+7.  Select **Connect directly to Azure Site Recovery without a proxy server** and select **Next**. The registration of the Hyper-V host with Azure Site Recovery will begin.
 
-9. Wait for registration to complete (this may take several minutes). Then select **Finish**.
+8. Wait for registration to complete (this may take several minutes). Then select **Finish**.
 
     ![Screenshot of the ASR provider showing successful registration.](images/Exercise3/asr-registered.png "Registration complete")
 
-10. Return to the Azure Migrate browser window. **Refresh** your browser, then re-open the **Discover machines** panel by selecting **Discover** under **Azure Migrate: Server Migration** and selecting **Yes, with Hyper-V** for **Are your machines virtualized?**.
+9. Return to the Azure Migrate browser window. **Refresh** your browser, then re-open the **Discover machines** panel by selecting **Discover** under **Azure Migrate: Server Migration** and selecting **Yes, with Hyper-V** for **Are your machines virtualized?**.
 
-11. Select **Finalize registration**, which should now be enabled.
+10. Select **Finalize registration**, which should now be enabled.
 
-    ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](images/Exercise3/discover-5.png "Finalize registration")
+    ![Screenshot of the Discover machines' panel from Azure Migrate, highlighting the download link Hyper-V registration key file.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t2%20s10.png?raw=true "Finalize registration")
 
-12. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take several minutes.
+11. Azure Migrate will now complete the registration with the Hyper-V host. **Wait** for the registration to complete. This may take several minutes.
 
     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Finalizing registration...' message.](images/Exercise3/discover-6.png "Finalizing registration...")
 
-13. Once the registration is complete, close the **Discover machines** panel using **X** button.
+12. Once the registration is complete, close the **Discover machines** panel using **X** button.
 
     ![Screenshot of the 'Discover machines' panel from Azure Migrate, showing the 'Registration finalized' message.](images/Exercise3/discover-7.png "Registration finalized")
 
-14. The **Azure Migrate: Server Migration** panel should now show 5 discovered servers..
+13. The **Azure Migrate: Server Migration** panel should now show 5 discovered servers..
 
     ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](images/Exercise3/discover-8-2.png "Discovered servers")
 
@@ -232,19 +230,19 @@ In this task, you will configure and enable the replication of your on-premises 
 
     ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines are selected.](images/Exercise3/replicate-4.png "Replicate - Virtual machines")
 
-5. In the **Target settings** tab, enter the information below,
-   - select your subscription and the existing **SmartHotelRG** resource group. 
-   - Under **Replication storage account** select the **migrationstorage<inject key="DeploymentID" enableCopy="false" />** storage account.
-   - under **Virtual Network** select **SmartHotelVNet**. 
-   - Under **Subnet** select **SmartHotel**. Select **Next**.
+5. In the **Target settings** tab, select the below information,
+   - Select your subscription and the existing **SmartHotelRG** resource group. 
+   - **Replication storage account**: Select the **migrationstorage<inject key="DeploymentID" enableCopy="false" />** storage account.
+   - **Virtual Network**: Select **SmartHotelVNet**. 
+   - **Subnet**: Select **SmartHotel**. Select **Next**.
  
 
     ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](images/Exercise3/replicate-5.png "Replicate - Target settings")
 
     > **Note:** For simplicity, in this lab you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
 
-6. In the **Compute** tab, select the configuration below,
-   - select the **Standard_F2s_v2** VM size for each virtual machine. 
+6. In the **Compute** tab, select the below configuration,
+   - Select the **Standard_F2s_v2** VM size for each virtual machine. 
    - Select the **Windows** operating system for the **smarthotelweb1**, **smarthotelweb2** virtual machines.
    - Select the **Linux** operating system for the **UbuntuWAF** virtual machine. 
    - Select **Next**. 
