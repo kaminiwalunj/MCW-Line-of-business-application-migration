@@ -85,8 +85,8 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
     >**Note**: If you receive an error while starting the **AzureMigrateAppliance** VM, then you can check if vm is in Saved state. If yes, please follow the below instructions to start the vm.
 
      1. Right click on the Azure Migrate appliance VM and select Upgrade Configuration version.
-	  2. On the pop-up, Select discard saved state and Upgrade
-	  3. Wait until all the updates are installed, then you can login to the vm using the password : demo!pass123
+     2. On the pop-up, Select discard saved state and Upgrade
+     3. Wait until all the updates are installed, then you can login to the vm using the password : <inject key="SmartHotelHost Admin Password" />
 
 #### Task summary 
 
