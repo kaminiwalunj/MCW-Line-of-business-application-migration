@@ -14,17 +14,17 @@ In this task you will create a new Azure SQL database to migrate the on-premises
 
 2. Expand the portal's left navigation by selecting **Show portal menu** in the top left then select **+ Create a resource**, then select **Databases**, then select **SQL Database**.
 
-    ![Azure portal screenshot showing the select path to create a SQL Database.](images/Exercise2/new-sql-db.png "New SQL Database")
+   ![Azure portal screenshot showing the select path to create a SQL Database.](images/Exercise2/new-sql-db.png "New SQL Database")
 
 3. The **Create SQL Database** blade opens, showing the **Basics** tab. Complete the form as follows:
 
-    - Subscription: **Select your subscription**.
+   - Subscription: **Select your subscription**.
   
-    - Resource group: (select existing) **SmartHotelDBRG**
+   - Resource group: (select existing) **SmartHotelDBRG**
   
-    - Database name: **smarthoteldb**
+   - Database name: **smarthoteldb**
   
-    - Server: Select **Create new** and fill in the New server blade as follows then select **OK**:
+   - Server: Select **Create new** and fill in the New server blade as follows then select **OK**:
   
         - Server name: **smarthoteldb<inject key="DeploymentID" enableCopy="false" />**
   
@@ -42,7 +42,7 @@ In this task you will create a new Azure SQL database to migrate the on-premises
   
     - Compute + storage: **Standard S0**
 
-    > **Note**: To select the **Standard S0** database tier, select **Configure database**, then **Looking for basic, standard, premium?**, select **Standard** and select **Apply**.
+   > **Note**: To select the **Standard S0** database tier, select **Configure database**, then **Looking for basic, standard, premium?**, select **Standard** and select **Apply**.
 
    ![Screenshot for selecting database tier.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/sql1.png?raw=true "selecting database tier")
 
@@ -159,9 +159,9 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
 
     ![Screenshot showing the new DMA project creation dialog.](images/Exercise2/new-dma-assessment.png "New DMA assessment")
 
-11. On the **Options** tab select **Next**.
+11. On the **Options** tab **select Next**.
 
-12. On the **Select sources** page, in the **Connect to a server** dialog box, provide the connection details to the SQL Server, and then **select Connect**.
+12. On the **Select sources** page, in the **Connect to a server** dialog box, provide the connection details to the SQL Server, and then select **Connect**.
 
     - Server name: **192.168.0.6**
   
@@ -219,10 +219,8 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 
 1. In the Azure portal, expand the portal's left navigation by selecting **Show portal menu** in the top left, then click on **Resource groups** and select the **SmartHotelDBRG** resource group,
  
-
    ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/db1.png?raw=true "New SQL Database")
    
-
    ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/db2.png?raw=true "New SQL Database")
    
    - Select the database server **smarthoteldb<inject key="DeploymentID" enableCopy="false" />**.
@@ -428,7 +426,6 @@ The schema migration will be carried out using an offline data migration activit
 
    > Note: The Configure migration settings step allows you to specify which tables should have their data migrated.
   
-
    ![Screenshot from DMS showing tables being selected for replication.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-7.png?raw=true "Configure migration settings - select tables")
 
 7. At the **Migration summary** step, enter **DataMigration** as the **Activity name**. Select **Start migration**.
