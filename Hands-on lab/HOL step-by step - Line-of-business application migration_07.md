@@ -75,27 +75,27 @@ In this task you will create an Azure Database Migration Service resource. This 
 
 2. On the **Azure Database Migration Service** blade, select **Create**.
 
-    ![Screenshot showing the DMS 'create' button.](images/Exercise2/dms-create-1.png "Create Azure Database Migration Service")
+   ![Screenshot showing the DMS 'create' button.](images/Exercise2/dms-create-1.png "Create Azure Database Migration Service")
 
 3. In the **Create Migration Service** blade, on the **Basics** tab, enter the following values:
    
-    - Subscription: **Select your Azure subscription**.
+   - Subscription: **Select your Azure subscription**.
   
-    - Resource group: **AzureMigrateRG**
+   - Resource group: **AzureMigrateRG**
   
-    - Service Name: **SmartHotelDBMigration**
+   - Service Name: **SmartHotelDBMigration**
   
-    - Location: **Choose the same region as the Resource Group**.
+   - Location: **Choose the same region as the Resource Group**.
 
-    - Service mode: **Azure**
+   - Service mode: **Azure**
   
-    - Pricing tier: **Standard: 1 vCore**
+   - Pricing tier: **Standard: 1 vCore**
 
-    ![Screenshot showing the Create DMS 'Basics' tab.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e2%20t2%20s3.png?raw=true "Create DMS - Basics")
+   ![Screenshot showing the Create DMS 'Basics' tab.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e2%20t2%20s3.png?raw=true "Create DMS - Basics")
 
 4. Select **Next: Networking** to move to the **Networking** tab, and select the **DMSvnet/DMS** virtual network and subnet in the **SmartHotelHostRG** resource group.
    
-    ![Screenshot showing the Create DMS 'Networking' tab.](images/Exercise2/create-dms-network.png "Create DMS - Networking")
+   ![Screenshot showing the Create DMS 'Networking' tab.](images/Exercise2/create-dms-network.png "Create DMS - Networking")
 
 5. Select **Review + create**, followed by **Create**.
 
@@ -111,7 +111,7 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
 
 1. Return to the **Azure Migrate** blade in the Azure portal. Select the **Overview** panel, then select **Assess and migrate databases**.
 
-    ![Screenshot showing the Azure Migrate Overview blade in the Azure portal, with the 'Assess and migrate databases' button highlighted.](images/Exercise2/assess-migrate-db-2.png "Assess and migrate databases button")  
+   ![Screenshot showing the Azure Migrate Overview blade in the Azure portal, with the 'Assess and migrate databases' button highlighted.](images/Exercise2/assess-migrate-db-2.png "Assess and migrate databases button")  
 
 2. Under **Assessment tools**, click on **Click here** link to add a tool.
 
@@ -138,22 +138,22 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
 
    ![Screenshot showing the Dma.exe.config setting enabling upload to Azure Migrate.](images/Exercise2/dma-enable-upload.png "Dma.exe.config file")
 
-8.  Launch **Microsoft Data Migration Assistant** using the desktop icon .
+8. Launch **Microsoft Data Migration Assistant** using the desktop icon .
 
-    ![Screenshot for installing Data Migration Assistant.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/dma5.png?raw=true "Data Migration Assistant")
+   ![Screenshot for installing Data Migration Assistant.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/dma5.png?raw=true "Data Migration Assistant")
   
 
-9.  In the Data Migration Assistant, select the **+ New** icon.  Fill in the project details as follows:
+9. In the Data Migration Assistant, select the **+ New** icon.  Fill in the project details as follows:
 
-    - Project type: **Assessment**
+   - Project type: **Assessment**
   
-    - Project name: **SmartHotelAssessment**
+   - Project name: **SmartHotelAssessment**
   
-    - Assessment type: **Database Engine**
+   - Assessment type: **Database Engine**
   
-    - Source server type: **SQL Server**
+   - Source server type: **SQL Server**
   
-    - Target server type: **Azure SQL Database**
+   - Target server type: **Azure SQL Database**
      
 10. Select **Create** to create the project.
 
@@ -267,7 +267,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
   
    - Private DNS zones: (default) **privatelink.database.windows.net**
 
-    ![Screenshot showing the 'Create a private endpoint' blade, 'Configuration' tab.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/private-endpoint.png?raw=true "Private Endpoint - Configuration")
+   ![Screenshot showing the 'Create a private endpoint' blade, 'Configuration' tab.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/private-endpoint.png?raw=true "Private Endpoint - Configuration")
 
 6. **Wait** for the deployment to complete. Once the deployment is done, click on  **Go to resource**.
 
@@ -328,7 +328,6 @@ We'll start by creating the private endpoint that allows the DMS to access the d
     ![Screenshot showing the 'Select source' step of the DMS Migration Wizard.](images/Exercise2/select-source.png "DMS project - Select source")
 
     > **Note**: The DMS service connects to the Hyper-V host, which has been pre-configured with a NAT rule to forward incoming SQL requests (TCP port 1433) to the SQL Server VM. In a real-world migration, the SQL Server VM would most likely have its own IP address on the internal network, via an external Hyper-V switch.
-    >
     > The Hyper-V host is accessed via its private IP address (10.0.0.4). The DMS service accesses this IP address over the peering connection between the DMS VNet and the SmartHotelHost VNet. This simulates a VPN or ExpressRoute connection between a DMS VNet and an on-premises network.
 
 15. In the **Select databases** step, the **Smarthotel.Registration** database should already be selected. Select **Next: Select target**.
