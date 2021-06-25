@@ -52,25 +52,25 @@ You will also configure a private endpoint in this network to allow private, sec
 
 2. In the **Create virtual network** blade, enter the following values:
 
-    - Subscription: **Select your Azure subscription**.
+   - Subscription: **Select your Azure subscription**.
   
-    - Resource group: (select existing) **SmartHotelRG**
+   - Resource group: (select existing) **SmartHotelRG**
   
-    - Name: **SmartHotelVNet**
+   - Name: **SmartHotelVNet**
   
-    - Region: **IMPORTANT: Select the same location as your Resource Group**.
+   - Region: **IMPORTANT: Select the same location as your Resource Group**.
 
    ![Screenshot of the Azure portal showing the create virtual network blade 'Basics' tab.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t2%20s2.png?raw=true "Create Virtual Network - Basics")
 
 3. Select **Next: IP Addresses >**, and enter the following configuration. Then select **Review + create**, then **Create**.
 
-    - IPv4 address space: **192.168.0.0/24** 
+   - IPv4 address space: **192.168.0.0/24** 
   
-    - First subnet: Select **Add subnet** and enter the following then select **Add**
+   - First subnet: Select **Add subnet** and enter the following then select **Add**
 
-    - Subnet name: **SmartHotel**
+   - Subnet name: **SmartHotel**
    
-    - Address range: **192.168.0.0/25**
+   - Address range: **192.168.0.0/25**
 
    ![Screenshot for creating subnet.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/subnet1.png?raw=true "creating subnet")
   
@@ -275,7 +275,7 @@ In this task you will modify the settings for each replicated VM to use a static
 
 1. Still using the **Azure Migrate: Server Migration - Replicating machines** blade, select the **smarthotelweb1** virtual machine. This opens a detailed migration and replication blade for this machine. Take a moment to study this information.
 
-    ![Screenshot from the 'Azure Migrate: Server Migration - Replicating machines' blade with the smarthotelweb1 machine highlighted.](images/Exercise3/config-0.png "Replicating machines")
+   ![Screenshot from the 'Azure Migrate: Server Migration - Replicating machines' blade with the smarthotelweb1 machine highlighted.](images/Exercise3/config-0.png "Replicating machines")
 
 2. Select **Compute and Network** under **General** on the left, then select **Edit**.
 
@@ -319,7 +319,7 @@ In this task you will perform a migration of the UbuntuWAF, smarthotelweb1, and 
 
    ![Screenshot of the 'Migrate' blade, with 3 machines selected and the 'Migrate' button highlighted.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t6%20ss2.png?raw=true "Migrate - VM selection")
 
-    > **Note**: You can optionally choose whether the on-premises virtual machines should be automatically shut down before migration to minimize data loss. Either setting will work for this lab.
+   > **Note**: You can optionally choose whether the on-premises virtual machines should be automatically shut down before migration to minimize data loss. Either setting will work for this lab.
 
 3. The migration process will start.
 
@@ -387,7 +387,7 @@ On the migrated VM **smarthotelweb2**, this configuration needs to be updated to
 
 2. Click on **smarthotelweb2** VM, from the overview blade, and select **Connect**. Select **Bastion** from the available options and click on **Use Bastion**.
 
-    **Note:** You may have to wait a few minutes and refresh to have the option to enter the credentials. 
+   **Note:** You may have to wait a few minutes and refresh to have the option to enter the credentials. 
 
 3. Connect to the machine with the username **Administrator** and the password **demo!pass123**. When prompted, **Allow** clipboard access.
 
@@ -407,7 +407,7 @@ On the migrated VM **smarthotelweb2**, this configuration needs to be updated to
 
     Set the password in the connection string to **<inject key="SmartHotelHost Admin Password" />**.
 
-   ![Screenshot showing the user ID and Password in the web.config database connection string.](images/Exercise3/web2-connection-string.png "web.config")
+    ![Screenshot showing the user ID and Password in the web.config database connection string.](images/Exercise3/web2-connection-string.png "web.config")
 
 6. **Save** the `web.config` file and exit your Bastion remote desktop session.
 
@@ -465,7 +465,7 @@ There are a number of post-migration steps that should be completed before the m
 In this task you will install the Azure Virtual Machine Agent (VM Agent) on your migrated Azure VMs and clean up any migration resources. The remaining steps are common for any Azure application, not just migrations, and are therefore out of scope for this hands-on lab.
 
 > **Note**: The Microsoft Azure Virtual Machine Agent (VM Agent) is a secure, lightweight process that manages virtual machine (VM) interaction with the Azure Fabric Controller. The VM Agent has a primary role in enabling and executing Azure virtual machine extensions. VM Extensions enable post-deployment configuration of VM, such as installing and configuring software. VM extensions also enable recovery features such as resetting the administrative password of a VM. Without the Azure VM Agent, VM extensions cannot be used.
->
+
 > In this lab, you will install the VM agent on the Azure VMs after migration. Alternatively, you could instead install the agent on the VMs in Hyper-V before migration.
 
 1. In the Azure portal, locate the **smarthotelweb1** VM and select **Connect**. Select **Bastion** from the available options and click on **Use Bastion**.
