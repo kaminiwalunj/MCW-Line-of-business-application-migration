@@ -217,12 +217,11 @@ In subsequent tasks, you will use this project to migrate both the database sche
 
 We'll start by creating the private endpoint that allows the DMS to access the database server.
 
-1. In the Azure portal, expand the portal's left navigation by selecting **Show portal menu** in the top left, then select **Resource groups**. 
+1. In the Azure portal, expand the portal's left navigation by selecting **Show portal menu** in the top left, then click on **Resource groups** and select the **SmartHotelDBRG** resource group,
  
 
    ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/db1.png?raw=true "New SQL Database")
    
-   - Select the **SmartHotelDBRG** resource group,
 
    ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/db2.png?raw=true "New SQL Database")
    
@@ -309,8 +308,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
     - Choose type of activity : Select Create project only from the dropdown
     - Select **Create**.
  
-
-    ![Screenshot showing the Database Migration Service blade in the Azure portal, with the 'New Migration Project' button highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-1.png?raw=true "DMS migration project - settings")
+   ![Screenshot showing the Database Migration Service blade in the Azure portal, with the 'New Migration Project' button highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-1.png?raw=true "DMS migration project - settings")
 
 14. The Migration Wizard opens, showing the **Select source** step. Complete the settings as follows, then select **Next: Select databases**.
 
