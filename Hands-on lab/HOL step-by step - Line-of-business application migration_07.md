@@ -241,7 +241,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
   
    - Region: **Select the same region as the Resource Group**.
   
-  ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](images/Exercise2/private-endpoint-1.png "Private Endpoint - Basics")
+   ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](images/Exercise2/private-endpoint-1.png "Private Endpoint - Basics")
 
 4. On the **Resource** tab, entering the following configuration then select **Next: Configuration**. 
 
