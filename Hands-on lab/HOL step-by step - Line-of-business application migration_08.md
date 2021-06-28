@@ -30,7 +30,7 @@ In this task you will create a new Azure Storage Account that will be used by Az
   
    - Redundancy: **Locally-redundant storage (LRS)**
 
-    ![Screenshot of the Azure portal showing the create storage account blade.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t1%20s2.png?raw=true "Storage account settings")
+    ![Screenshot of the Azure portal showing the create storage account blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise3/create-sg.png?raw=true "Storage account settings")
 
 3. Select **Review + create**, then select **Create**.
 
@@ -60,7 +60,7 @@ You will also configure a private endpoint in this network to allow private, sec
   
    - Region: **IMPORTANT: Select the same location as your Resource Group**.
 
-   ![Screenshot of the Azure portal showing the create virtual network blade 'Basics' tab.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t2%20s2.png?raw=true "Create Virtual Network - Basics")
+   ![Screenshot of the Azure portal showing the create virtual network blade 'Basics' tab.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise3/create-vnet.png?raw=true "Create Virtual Network - Basics")
 
 3. Select **Next: IP Addresses >**, and enter the following configuration. Then select **Review + create**, then **Create**.
 
@@ -237,7 +237,7 @@ In this task, you will configure and enable the replication of your on-premises 
    - **Subnet**: Select **SmartHotel**. Select **Next**.
  
 
-   ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](images/Exercise3/replicate-5.png "Replicate - Target settings")
+   ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise3/migration.png?raw=true "Replicate - Target settings")
 
  > **Note:** For simplicity, in this lab you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
 
@@ -369,7 +369,7 @@ Azure Bastion requires a dedicated subnet within the same virtual network as the
   
    - Public IP address: (Create new) **Bastion-IP**
 
-   ![Screenshot showing the 'Create a Bastion' blade.](images/Exercise3/bastion-create.png "Create a Bastion")
+   ![Screenshot showing the 'Create a Bastion' blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise3/create-bastion.png?raw=true "Create a Bastion")
 
 5. Select **Review + create**, then **Create**.
 
