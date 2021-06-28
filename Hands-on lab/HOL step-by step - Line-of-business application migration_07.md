@@ -50,7 +50,7 @@ In this task you will create a new Azure SQL database to migrate the on-premises
 
     The final screenshot will look like this:
 
-   ![Screenshot from the Azure portal showing the Create SQL Database blade.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e2%20t1%20s33.png?raw=true "Create SQL Database")
+   ![Screenshot from the Azure portal showing the Create SQL Database blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/create-sql-db.png?raw=true "Create SQL Database")
 
 
 4. Select **Next: Networking >** to move to the **Networking** tab. Confirm that **No access** is selected.
@@ -91,7 +91,7 @@ In this task you will create an Azure Database Migration Service resource. This 
   
    - Pricing tier: **Standard: 1 vCore**
 
-   ![Screenshot showing the Create DMS 'Basics' tab.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e2%20t2%20s3.png?raw=true "Create DMS - Basics")
+   ![Screenshot showing the Create DMS 'Basics' tab.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/create-dms.png?raw=true "Create DMS - Basics")
 
 4. Select **Next: Networking** to move to the **Networking** tab, and select the **DMSvnet/DMS** virtual network and subnet in the **SmartHotelHostRG** resource group.
    
@@ -237,7 +237,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
   
    - Region: **Select the same region as the Resource Group**.
   
-   ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](images/Exercise2/private-endpoint-1.png "Private Endpoint - Basics")
+   ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/create-dms-endpoint.png?raw=true "Private Endpoint - Basics")
 
 4. On the **Resource** tab, entering the following configuration then select **Next: Configuration**. 
 
