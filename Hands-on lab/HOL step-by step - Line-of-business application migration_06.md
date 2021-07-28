@@ -246,6 +246,77 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
 13. Take a few minutes to explore other aspects of the migration assessment.
 
+>**Note**: The process of gathering information of operating system environments (OSE) and migrating data of VMs between environments takes some time due to the nature of transferring data.  However, there are a few steps that can be done to speed up and view how the system works.  These are a few options:
+>
+> Common steps to refresh data: (also see [Troubleshoot Discovery](https://docs.microsoft.com/en-us/azure/migrate/troubleshoot-discovery#common-software-inventory-errors))
+> 
+> -	[Server data not updating in portal](https://docs.microsoft.com/en-us/azure/migrate/troubleshoot-discovery#server-data-not-updating-in-portal) – if the servers’ data is not refreshing, this is a method to accelerate it.
+> 
+> -	[Do not see software inventory details](https://docs.microsoft.com/en-us/azure/migrate/troubleshoot-discovery#do-not-see-software-inventory-details-even-after-updating-guest-credentials) – by default the software inventory is only refreshed once every 24 hours. This forces a refresh.
+> 
+> -	[Software inventory errors](https://docs.microsoft.com/en-us/azure/migrate/troubleshoot-discovery#common-software-inventory-errors) – during inventory there are sometimes error codes returned. This lists all the error codes and meanings.
+>
+>_Refresh Data_
+> 
+> Many issues in the Migrate can be related to the appliance not refreshing the data due to regular schedules or data not being transferred.  Forcing the data and information to be updated can be achieved with the following steps:
+> 1.	In Windows, Linux and SQL Servers > Azure Migrate: Discovery and assessment, select Overview.
+> 2.	Under Manage, select Appliances.
+> 3.	Select Refresh services.
+> 4.	Wait for the refresh operation to complete. You should now see up-to-date information.
+>
+>_Discover Import_
+>
+>If the system is not able to assess the environment or identify details, you can import an inventory of the environment, their configuration, and utilization with a CSV file.  You can download an example [CSV file here](https://go.microsoft.com/fwlink/?linkid=2109031). The properties in the CSV are:
+> 
+> -	Server Name – name of the computer
+> 
+> -	IP Addresses – semi-colon separated list of IPv4 and IPv6 addresses used by the machine
+> 
+> -	Cores – number of vCPU used 
+> 
+> -	Memory – amount of memory in MB
+> 
+> -	OS Details
+> 
+>   - Name – type of operating system
+>   - Version – version of the OS in use
+>   -	Architecture – architecture (like x64/x86)
+> 
+> -	CPU Utilization – percentage of the CPU in use
+> 
+> -	Memory Utilization – percentage spike of the CPU usage
+> 
+> -	Network
+>   -	Adapter count – number of NIC’s attached to the machine
+>   -	Input Throughput – amount of throughput in Mbps into system
+>   -	Output Throughput – amount of throughput in Mbps out of the system
+> 
+> -	Boot Type – type of boot used by systems (UEFI/BIOS)
+> 
+> -	Disks
+>   -	Number of disks – number of disks attached to disk
+>   -	Per disk size – size of disk in GB
+>   -	Per disk reads (Bytes) – amount of MB per second read from each disk
+>   -	Per disk writes (Bytes) – amount of MB per second written to each disk
+>   -	Per disk reads (IOPS) – count of output operations from disk per second
+>   -	Per disk writes (IOPS) – count of input operations from disk per second
+> 
+> Once the CSV is populated, you can then import the systems into the Migrate assessment phase by doing the following:
+>
+>1.	Go to the Azure Migrate, under Migration goals, select the appropriate resource type (ie: Windows, Linux and SQL Server).
+>
+>2.	Select the **Discover** link.
+>
+>   ![Screenshot showing the discover link within Azure Migrate.](images/Exercise1/discoverlink.png "Azure Migrate Discover link")
+>
+>3. Choose **Import using CSV** at the top.
+>
+>![Screenshot showing the import using CSV selection in Azure Migrate.](images/Exercise1/importusingcsv.png "Import using CSV")
+>
+>4. Upload the CSV file of your resources using the on-screen instructions by selecting **Import** to read the file.
+
+ 
+
 #### Task summary 
 
 In this task you created and configured an Azure Migrate migration assessment.
