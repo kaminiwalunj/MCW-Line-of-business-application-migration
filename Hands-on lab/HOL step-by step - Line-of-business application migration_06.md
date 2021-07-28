@@ -184,11 +184,13 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
 16. Wait for the Azure Migrate status to show **Discovery has been successfully initiated**. This will take several minutes. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table..
 
-17. Return to the **Azure Migrate** blade in the Azure portal.  Select **Windows, Linux and SQL Server**, then select **Refresh**.  Under **Azure Migrate: Windows, Linux and SQL Server** you should see a count of the number of servers discovered so far. If discovery is still in progress, select **Refresh** periodically until 5 discovered servers are shown. This may take several minutes
+17. Now click on Appliances 
+      ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Appliances' button.](images/Exercise1/Discovered_Servers_Count.png "Appliances")
+      
+18. Go to the Overview, you should see a count of the number of servers discovered so far.
+      
+    ![Screenshot of the Azure Migrate portal blade. Under 'Azure Migrate: Server Assessment' the value for 'Machines' is '5'.](images/Exercise1/Machines.png "Machines")
 
-    ![Screenshot of the Azure Migrate portal blade. Under 'Azure Migrate: Server Assessment' the value for 'discovered servers' is '5'.](images/Exercise1/discovered-servers-v2.png "Discovered servers")
-
-    **Wait for the discovery process to complete before proceeding to the next Task**.
 
 #### Task summary 
 
@@ -206,10 +208,14 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
    ![Screenshot of the Azure Migrate 'Assess servers' blade, showing the assessment name.](images/Exercise1/assess-servers-v2.png "Assess servers - assessment name")
 
-3. The **Assessment properties** blade allows you to tailor many of the settings used when making a migration assessment report. Take a few moments to explore the wide range of assessment properties. Hover over the information icons to see more details on each setting. Choose any settings you like, then select **Save**. (You have to make a change for the Save button to be enabled; if you don't want to make any changes, just close the blade.)
-
-   ![Screenshot of the Azure Migrate 'Assessment properties' blade, showing a wide range of migration assessment settings.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e1%20t4%20s3.png?raw=true "Assessment properties")
-
+3. The **Assessment properties** blade
+      1. Under **Target Properties**-> Select **Target Location** as **Central US** from drop down list.
+      2. **Reserved Capacity(Compute)**-> 1 Year Reserved.
+      3. Under **VM Size**-> Select VM Series as **Select All** from drop down list.
+      4. Select **Save**. 
+   
+    ![Screenshot of the Assessment Properties.](images/Exercise1/Assessment_properties.png "Assessment_properties")
+    
 4. Select **Next** to move to the **Select machines to assess** tab. Enter **SmartHotelAssessment** as the assessment name, choose **Create New** and enter the group name **SmartHotel VMs**. Select the **smarthotelweb1**, **smarthotelweb2** and **UbuntuWAF** VMs. Click on **Next**.
 
    ![Screenshot of the Azure Migrate 'Assess servers' page. A new server group containing servers smarthotelweb1, smarthotelweb2, and UbuntuWAF.](images/Exercise1/assessment-vms-v2.png "Assessment VM group")
