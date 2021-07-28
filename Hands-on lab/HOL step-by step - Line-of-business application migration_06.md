@@ -178,6 +178,8 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
 15. Select **Start discovery** to kick off VM discovery from the successfully validated hosts/clusters.
 
+   > Note: The discovery process can take upto 10 minutes. 
+
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Start discovery' button.](images/Exercise1/add-disc4.png "Start discovery")
 
 16. Wait for the Azure Migrate status to show **Discovery has been successfully initiated**. This will take several minutes. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table..
