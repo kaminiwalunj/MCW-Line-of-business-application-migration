@@ -186,9 +186,10 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
 17. Now click on Appliances 
       ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Appliances' button.](images/Exercise1/Discovered_Servers_Count.png "Appliances")
-19. Return to the **Azure Migrate** blade in the Azure portal.  Select **Windows, Linux and SQL Server**, then select **Refresh**.  Under **Azure Migrate: Windows, Linux and SQL Server** you should see a count of the number of servers discovered so far. If discovery is still in progress, select **Refresh** periodically until 5 discovered servers are shown. This may take several minutes
-
-    ![Screenshot of the Azure Migrate portal blade. Under 'Azure Migrate: Server Assessment' the value for 'discovered servers' is '5'.](images/Exercise1/discovered-servers-v2.png "Discovered servers")
+      
+18. Go to the Overview, you should see a count of the number of servers discovered so far.
+      
+    ![Screenshot of the Azure Migrate portal blade. Under 'Azure Migrate: Server Assessment' the value for 'Machines' is '5'.](images/Exercise1/Machines.png "Machines")
 
     **Wait for the discovery process to complete before proceeding to the next Task**.
 
