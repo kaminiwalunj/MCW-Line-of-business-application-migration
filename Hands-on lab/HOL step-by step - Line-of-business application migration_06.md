@@ -214,7 +214,8 @@ In this task, you will use Azure Migrate to create a migration assessment for th
       3. Under **VM Size**-> Select VM Series as **Select All** from drop down list.
       4. Select **Save**. 
    
-    ![Screenshot of the Assessment Properties.](images/Exercise1/Assessment properties.png "Assessment properties")
+    ![Screenshot of the Assessment Properties.](images/Exercise1/Assessment_properties.png "Assessment_properties")
+    
 4. Select **Next** to move to the **Select machines to assess** tab. Enter **SmartHotelAssessment** as the assessment name, choose **Create New** and enter the group name **SmartHotel VMs**. Select the **smarthotelweb1**, **smarthotelweb2** and **UbuntuWAF** VMs. Click on **Next**.
 
    ![Screenshot of the Azure Migrate 'Assess servers' page. A new server group containing servers smarthotelweb1, smarthotelweb2, and UbuntuWAF.](images/Exercise1/assessment-vms-v2.png "Assessment VM group")
