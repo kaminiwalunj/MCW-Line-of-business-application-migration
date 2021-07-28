@@ -191,7 +191,6 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
       
     ![Screenshot of the Azure Migrate portal blade. Under 'Azure Migrate: Server Assessment' the value for 'Machines' is '5'.](images/Exercise1/Machines.png "Machines")
 
-    **Wait for the discovery process to complete before proceeding to the next Task**.
 
 #### Task summary 
 
