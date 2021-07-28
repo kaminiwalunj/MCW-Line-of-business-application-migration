@@ -213,7 +213,8 @@ In this task, you will use Azure Migrate to create a migration assessment for th
       2. **Reserved Capacity(Compute)**-> 1 Year Reserved.
       3. Under **VM Size**-> Select VM Series as **Select All** from drop down list.
       4. Select **Save**. 
-   ![Screenshot of the Azure Migrate 'Assignemnts Properties1' blade, showing a wide range of migration assessment settings.](images/Exercise1/Assignemnts Properties1.png "Assignemnts Properties1")
+   
+    ![Screenshot of the Assessment Properties for 'Assignemnts Properties1'.](images/Exercise1/Assignemnts Properties1.png "Assignemnts Properties1")
 
 4. Select **Next** to move to the **Select machines to assess** tab. Enter **SmartHotelAssessment** as the assessment name, choose **Create New** and enter the group name **SmartHotel VMs**. Select the **smarthotelweb1**, **smarthotelweb2** and **UbuntuWAF** VMs. Click on **Next**.
 
