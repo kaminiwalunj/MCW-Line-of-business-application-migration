@@ -208,9 +208,12 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
    ![Screenshot of the Azure Migrate 'Assess servers' blade, showing the assessment name.](images/Exercise1/assess-servers-v2.png "Assess servers - assessment name")
 
-3. The **Assessment properties** blade allows you to tailor many of the settings used when making a migration assessment report. Take a few moments to explore the wide range of assessment properties. Hover over the information icons to see more details on each setting. Choose any settings you like, then select **Save**. (You have to make a change for the Save button to be enabled; if you don't want to make any changes, just close the blade.)
-
-   ![Screenshot of the Azure Migrate 'Assessment properties' blade, showing a wide range of migration assessment settings.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e1%20t4%20s3.png?raw=true "Assessment properties")
+3. The **Assessment properties** blade
+      1. Under **Target Properties**-> Select **Target Location** as **Central US** from drop down list.
+      2. **Reserved Capacity(Compute)**-> 1 Year Reserved.
+      3. Under **VM Size**-> Select VM Series as **Select All** from drop down list.
+      4. Select **Save**. 
+   ![Screenshot of the Azure Migrate 'Assignment properties1' blade, showing a wide range of migration assessment settings.](images/Exercise1/Assignemnts Properties1.png "Assignments Properties1")
 
 4. Select **Next** to move to the **Select machines to assess** tab. Enter **SmartHotelAssessment** as the assessment name, choose **Create New** and enter the group name **SmartHotel VMs**. Select the **smarthotelweb1**, **smarthotelweb2** and **UbuntuWAF** VMs. Click on **Next**.
 
