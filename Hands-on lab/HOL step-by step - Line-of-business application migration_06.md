@@ -235,11 +235,11 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 >
 >2.	Select the **Discover** link.
 >
->   ![Screenshot showing the discover link within Azure Migrate.](images/Exercise1/discoverlink.png "Azure Migrate Discover link")
+>   ![Screenshot showing the discover link within Azure Migrate.](images/Exercise1/lob-discovery-1.png "Azure Migrate Discover link")
 >
 >3. Choose **Import using CSV** at the top.
 >
->![Screenshot showing the import using CSV selection in Azure Migrate.](images/Exercise1/importusingcsv.png "Import using CSV")
+>![Screenshot showing the import using CSV selection in Azure Migrate.](images/Exercise1/lob-discovery-2.png "Import using CSV")
 >
 >4. Upload the CSV file of your resources using the on-screen instructions by selecting **Import** to read the file.
 
