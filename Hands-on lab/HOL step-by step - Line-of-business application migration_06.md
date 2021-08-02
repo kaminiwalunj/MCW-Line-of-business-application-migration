@@ -189,6 +189,61 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
     ![Screenshot of the Azure Migrate portal blade. Under 'Azure Migrate: Server Assessment' the value for 'discovered servers' is '5'.](images/Exercise1/discovered-servers-v2.png "Discovered servers")
 
     **Wait for the discovery process to complete before proceeding to the next Task**.
+    
+>**Note**: If the discovery process takes an inordinate amount of time or the source resources are not allowing the appliance to discover the resources in an appropriate time to complete this exercise, you can manually import the systems via CSV:
+> 
+>_Discover Import_
+>
+>If the system is not able to assess the environment or identify details, you can import an inventory of the environment, their configuration, and utilization with a CSV file.  You can download an example [CSV file here](https://go.microsoft.com/fwlink/?linkid=2109031). The properties in the CSV are:
+> 
+> -	Server Name – name of the computer
+> 
+> -	IP Addresses – semi-colon separated list of IPv4 and IPv6 addresses used by the machine
+> 
+> -	Cores – number of vCPU used 
+> 
+> -	Memory – amount of memory in MB
+> 
+> -	OS Details
+> 
+>   - Name – type of operating system
+>   - Version – version of the OS in use
+>   -	Architecture – architecture (like x64/x86)
+> 
+> -	CPU Utilization – percentage of the CPU in use
+> 
+> -	Memory Utilization – percentage spike of the CPU usage
+> 
+> -	Network
+>   -	Adapter count – number of NIC’s attached to the machine
+>   -	Input Throughput – amount of throughput in Mbps into system
+>   -	Output Throughput – amount of throughput in Mbps out of the system
+> 
+> -	Boot Type – type of boot used by systems (UEFI/BIOS)
+> 
+> -	Disks
+>   -	Number of disks – number of disks attached to disk
+>   -	Per disk size – size of disk in GB
+>   -	Per disk reads (Bytes) – amount of MB per second read from each disk
+>   -	Per disk writes (Bytes) – amount of MB per second written to each disk
+>   -	Per disk reads (IOPS) – count of output operations from disk per second
+>   -	Per disk writes (IOPS) – count of input operations from disk per second
+> 
+> Once the CSV is populated, you can then import the systems into the Migrate assessment phase by doing the following:
+>
+>1.	Go to the Azure Migrate, under Migration goals, select the appropriate resource type (ie: Windows, Linux and SQL Server).
+>
+>2.	Select the **Discover** link.
+>
+>   ![Screenshot showing the discover link within Azure Migrate.](images/Exercise1/discoverlink.png "Azure Migrate Discover link")
+>
+>3. Choose **Import using CSV** at the top.
+>
+>![Screenshot showing the import using CSV selection in Azure Migrate.](images/Exercise1/importusingcsv.png "Import using CSV")
+>
+>4. Upload the CSV file of your resources using the on-screen instructions by selecting **Import** to read the file.
+
+     
 
 #### Task summary 
 
@@ -266,58 +321,8 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 > 3.	Select Refresh services.
 > 4.	Wait for the refresh operation to complete. You should now see up-to-date information.
 >
->_Discover Import_
->
->If the system is not able to assess the environment or identify details, you can import an inventory of the environment, their configuration, and utilization with a CSV file.  You can download an example [CSV file here](https://go.microsoft.com/fwlink/?linkid=2109031). The properties in the CSV are:
-> 
-> -	Server Name – name of the computer
-> 
-> -	IP Addresses – semi-colon separated list of IPv4 and IPv6 addresses used by the machine
-> 
-> -	Cores – number of vCPU used 
-> 
-> -	Memory – amount of memory in MB
-> 
-> -	OS Details
-> 
->   - Name – type of operating system
->   - Version – version of the OS in use
->   -	Architecture – architecture (like x64/x86)
-> 
-> -	CPU Utilization – percentage of the CPU in use
-> 
-> -	Memory Utilization – percentage spike of the CPU usage
-> 
-> -	Network
->   -	Adapter count – number of NIC’s attached to the machine
->   -	Input Throughput – amount of throughput in Mbps into system
->   -	Output Throughput – amount of throughput in Mbps out of the system
-> 
-> -	Boot Type – type of boot used by systems (UEFI/BIOS)
-> 
-> -	Disks
->   -	Number of disks – number of disks attached to disk
->   -	Per disk size – size of disk in GB
->   -	Per disk reads (Bytes) – amount of MB per second read from each disk
->   -	Per disk writes (Bytes) – amount of MB per second written to each disk
->   -	Per disk reads (IOPS) – count of output operations from disk per second
->   -	Per disk writes (IOPS) – count of input operations from disk per second
-> 
-> Once the CSV is populated, you can then import the systems into the Migrate assessment phase by doing the following:
->
->1.	Go to the Azure Migrate, under Migration goals, select the appropriate resource type (ie: Windows, Linux and SQL Server).
->
->2.	Select the **Discover** link.
->
->   ![Screenshot showing the discover link within Azure Migrate.](images/Exercise1/discoverlink.png "Azure Migrate Discover link")
->
->3. Choose **Import using CSV** at the top.
->
->![Screenshot showing the import using CSV selection in Azure Migrate.](images/Exercise1/importusingcsv.png "Import using CSV")
->
->4. Upload the CSV file of your resources using the on-screen instructions by selecting **Import** to read the file.
 
- 
+
 
 #### Task summary 
 
