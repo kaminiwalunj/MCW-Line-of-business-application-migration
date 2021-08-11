@@ -1,7 +1,8 @@
 # Release Notes
 
-### August 2021
-  - No planned Updates
+### 11 August 2021
+  - Minor update
+  - Added a note in GettingStarted.md file to skip MFA while logging into the Azure Portal.
   
 ------------------
 
