@@ -2,7 +2,7 @@
 
 ### 11 August 2021
   - Minor update
-  - Changes have been made to GettingStarted.md file
+  - Added a note in GettingStarted.md file to skip MFA while logging into the Azure Portal.
   
 ------------------
 
