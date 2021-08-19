@@ -2,7 +2,7 @@
 
 ### 11 August 2021
   - Minor update in the Lab Guide.
-  - A note has been added to the GettingStarted.md file to assist users in bypassing MFA when logging into the Azure Portal.
+  - A note has been added to the GettingStarted.md file to assist users in skipping MFA when logging into the Azure Portal.
   
 ------------------
 
