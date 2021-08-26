@@ -40,13 +40,13 @@ In this task you will create a new Azure SQL database to migrate the on-premises
 
     - Want to use SQL elastic pool?: **No**
   
-    - Compute + storage: **Standard S0**
+    - Compute + storage: **Standard**
 
-   > **Note**: To select the **Standard S0** database tier, select **Configure database**, then **Looking for basic, standard, premium?**, select **Standard** and select **Apply**.
+   > **Note**: To select the **Standard** database tier, select **Configure database**, then select **Standard** from the dropdown for **Service tier** and select **Apply**.
 
-   ![Screenshot for selecting database tier.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/sql1.png?raw=true "selecting database tier")
+   ![Screenshot for selecting database tier.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/sqldb1.png?raw=true "selecting database tier")
 
-   ![Screenshot for selecting database tier.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/sql2.png?raw=true "selecting database tier")
+   ![Screenshot for selecting database tier.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/sqldb2.png?raw=true "selecting database tier")
 
     The final screenshot will look like this:
 
