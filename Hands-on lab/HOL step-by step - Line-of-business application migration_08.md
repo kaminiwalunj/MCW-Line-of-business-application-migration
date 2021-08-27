@@ -96,8 +96,7 @@ You will also configure a private endpoint in this network to allow private, sec
    - Region: **Select the same location as the Resource Group**.
   
    ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t2%20s5.png?raw=true "Create a Private Endpoint - Basics")
-    
-  Select **confirm** and select **Review and Create**.
+   
 
 6. On the **Resource** tab, enter the following configuration then select **Next: Configuration**:
 
