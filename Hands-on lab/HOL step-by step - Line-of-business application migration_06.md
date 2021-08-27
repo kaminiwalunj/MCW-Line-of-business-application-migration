@@ -147,7 +147,7 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' button.](images/Exercise1/add-cred1.png)
 
-11. Specify **hostlogin** as the friendly name for credentials, username **demouser**, and password **<inject key="SmartHotelHost Admin Password" />** for the Hyper-V host/cluster that the appliance will use to discover VMs. Select **Save
+11. Specify **hostlogin** as the friendly name for credentials, username **demouser**, and password **<inject key="SmartHotelHost Admin Password" />** for the Hyper-V host/cluster that the appliance will use to discover VMs. Select **Save**.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' panel.](images/Exercise1/add-cred2.png "Credentials")
 
@@ -159,13 +159,13 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' button.](images/Exercise1/add-disc1.png "Add discovery source")
 
-13. Click on **Add single item**, select **hostlogin** as the friendly name, and under 'IP Address / FQDN', enter **SmartHost<inject key="DeploymentID" enableCopy="false" />**.
+13. Click on **Add single item**, select **hostlogin** as the friendly name, and under 'IP Address / FQDN', enter **SmartHost<inject key="DeploymentID" enableCopy="false" />**. Select **Save**
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add discovery source' panel.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/discoverysource-1.png?raw=true "Discovery source - SmartHotelHost")
 
     > **Note:** You can either **Add single item** at a time or **Add multiple items** in one go. There is also an option to provide Hyper-V host/cluster details through **Import CSV**.
 
-14. Select **Save**. The appliance will validate the connection to the Hyper-V hosts/clusters added and show the **Validation status** in the table against each host/cluster
+14. The appliance will validate the connection to the Hyper-V hosts/clusters added and show the **Validation status** in the table against each host/cluster
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the successful validation of the configured discovery source.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/discoverysourcevalidation.png?raw=true "Discovery source - validation successful")
 
@@ -283,11 +283,11 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
    ![Screenshot showing a list of Azure Migrate assessments. There is only one assessment in the list. It has been highlighted.](images/Exercise1/assessment-list-v2.png "Azure Migrate - Assessments (list)")
 
-8. Take a moment to study the assessment overview.
+8. Take a moment to study the assessment overview and select **Edit properties**..
 
    ![Screenshot showing an Azure Migrate assessment overview for the SmartHotel application.](images/Exercise1/assessment-overview-v2.png "Assessment - Overview")
 
-9. Select **Edit properties**. Note how you can now modify the assessment properties you chose earlier. Change a selection of settings, and **Save** your changes. After a few moments, the assessment report will update to reflect your changes.
+9. Note how you can now modify the assessment properties you chose earlier. Change a selection of settings, and **Save** your changes. After a few moments, the assessment report will update to reflect your changes.
 
 10. Select **Azure readiness** (either the chart or on the left navigation). Note that for the **UbuntuWAF** VM, a specific concern is listed regarding the readiness of the VM for migration.
 
