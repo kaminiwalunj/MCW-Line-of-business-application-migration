@@ -477,19 +477,19 @@ In this task, you will explore the dependency visualization feature of Azure Mig
 
 1. Navigate to Azure Portal and select Log Analytics workspace created.
 
-    ![Screenshot showing the dependencies view in Azure Migrate.](https://raw.githubusercontent.com/ShivaUdari/MCW-Line-of-business-application-migration/prod/Hands-on%20lab/images/Exercise1/Select%20LA%20WS.png "LA WS")
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/LAWS.png "LA WS")
 
 3. Select Service Map Solution under General category.
 
-    ![Screenshot showing the dependencies view in Azure Migrate.](https://raw.githubusercontent.com/ShivaUdari/MCW-Line-of-business-application-migration/prod/Hands-on%20lab/images/Exercise1/Select%20ServiceMapSolution.png "ServiceMapSolution")
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/ServiceMapSolution.png "ServiceMapSolution")
 
 5. Click on Service Map under Summary.
 
-    ![Screenshot showing the dependencies view in Azure Migrate.](https://raw.githubusercontent.com/ShivaUdari/MCW-Line-of-business-application-migration/prod/Hands-on%20lab/images/Exercise1/Select%20ServiceMap.png "ServiceMap")
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/ServiceMap.png "ServiceMap")
 
 7. Now select SmartHotelWeb1 VM under machines then you will be able to view the dependencies.
 
-    ![Screenshot showing the dependencies view in Azure Migrate.](https://raw.githubusercontent.com/ShivaUdari/MCW-Line-of-business-application-migration/prod/Hands-on%20lab/images/Exercise1/Select%20SmartHotelWeb1.png "DependencyMap")
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/SmartHotelWeb1.png "DependencyMap")
 
 #### Task summary 
 
