@@ -461,6 +461,8 @@ In this task, you will explore the dependency visualization feature of Azure Mig
 
 1. Return to the Azure Portal and refresh the Azure Migrate **SmartHotel VMs** VM group blade. The 3 VMs on which the dependency agent was installed should now show their status as 'Installed'. (If not, refresh the page **using the browser refresh button**, not the refresh button in the blade.  It may take up to **5 minutes** after installation for the status to be updated.)
 
+> **Note**: Due to temporary issue, agents installed status not reflecting.
+
     ![Screenshot showing the dependency agent installed on each VM in the Azure Migrate VM group.](images/Exercise1/dependency-viz-installed.png "Dependency agent installed")
 
 2. Select **View dependencies**.
@@ -471,6 +473,23 @@ In this task, you will explore the dependency visualization feature of Azure Mig
 
     ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/dependencies.png "Dependency map")
 
+> **Note**: Follow the below steps to get the status of dependencies.
+
+1. Navigate to Azure Portal and select Log Analytics workspace created.
+
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/Select LA WS.png "LA WS")
+
+3. Select Service Map Solution under General category.
+
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/Select ServiceMapSolution.png "ServiceMapSolution")
+
+5. Click on Service Map under Summary.
+
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/Select ServiceMap.png "ServiceMap")
+
+7. Now select SmartHotelWeb1 VM under machines then you will be able to view the dependencies.
+
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/Select SmartHotelWeb1.png "DependencyMap")
 
 #### Task summary 
 
