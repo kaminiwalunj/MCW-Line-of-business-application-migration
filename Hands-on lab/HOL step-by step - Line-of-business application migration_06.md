@@ -505,23 +505,23 @@ In this task, you will explore the dependency visualization feature of Azure Mig
 
     ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/dependencies.png "Dependency map")
 
-    > **Note**: We will be checking the dependencies and VMs usingt the next steps.
+    > **Note**: We will be checking the dependencies and Appliance VMs using the next steps.
 
 1. Search for Log Analytics workspace under **Azure Migrate** RG.
 
-    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/LAWS.png "LA WS")
+    ![Screenshot showing the dependencies view in Azure Migrate.](https://raw.githubusercontent.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/prod/Hands-on%20lab/images/Exercise1/LAWS.png "LA WS")
 
 3. Select Solutions under General category.
 
-    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/ServiceMapSolution.png "ServiceMapSolution")
+    ![Screenshot showing the dependencies view in Azure Migrate.](https://raw.githubusercontent.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/prod/Hands-on%20lab/images/Exercise1/ServiceMapSolution.png "ServiceMapSolution")
 
-5. Click on Service Map under Summary.
+5. Click on Summary from left side menu and select **Service Map**.
 
-    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/ServiceMap.png "ServiceMap")
+    ![Screenshot showing the dependencies view in Azure Migrate.](https://raw.githubusercontent.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/prod/Hands-on%20lab/images/Exercise1/ServiceMap.png "ServiceMap")
 
 7. Now select SmartHotelWeb1 VM and other two VMs  under Machines then you will be able to view the dependencies.
 
-    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/SmartHotelWeb1.png "DependencyMap")
+    ![Screenshot showing the dependencies view in Azure Migrate.](https://raw.githubusercontent.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/prod/Hands-on%20lab/images/Exercise1/SmartHotelWeb1.png "DependencyMap")
 
 #### Task summary 
 
