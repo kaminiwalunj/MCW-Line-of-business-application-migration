@@ -493,16 +493,35 @@ In this task, you will explore the dependency visualization feature of Azure Mig
 
 1. Return to the Azure Portal and refresh the Azure Migrate **SmartHotel VMs** VM group blade. The 3 VMs on which the dependency agent was installed should now show their status as 'Installed'. (If not, refresh the page **using the browser refresh button**, not the refresh button in the blade.  It may take up to **5 minutes** after installation for the status to be updated.)
 
-   ![Screenshot showing the dependency agent installed on each VM in the Azure Migrate VM group.](images/Exercise1/dependency-viz-installed.png "Dependency agent installed")
+   > **Note**: If you see that the dependencies is showing as not installed, This is because right now there is issue going on with Azure that its not reflecting the latest status in dependencies blade. We will confirm the dependencies in next steps and will check the VMs in log analytics workspace.
+
+    ![Screenshot showing the dependency agent installed on each VM in the Azure Migrate VM group.](images/Exercise1/dependency-viz-installed.png "Dependency agent installed")
 
 2. Select **View dependencies**.
 
-   ![Screenshot showing the view dependencies button in the Azure Migrate VM group blade.](images/Exercise1/view-dependencies.png "View dependencies")
+    ![Screenshot showing the view dependencies button in the Azure Migrate VM group blade.](images/Exercise1/view-dependencies.png "View dependencies")
 
 3. Take a few minutes to explore the dependencies view. Expand each server to show the processes running on that server. Select a process to see process information. See which connections each server makes.
 
-   ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/dependencies.png "Dependency map")
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/dependencies.png "Dependency map")
 
+    > **Note**: We will be checking the dependencies and VMs usingt the next steps.
+
+1. Search for Log Analytics workspace under **Azure Migrate** RG.
+
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/LAWS.png "LA WS")
+
+3. Select Solutions under General category.
+
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/ServiceMapSolution.png "ServiceMapSolution")
+
+5. Click on Service Map under Summary.
+
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/ServiceMap.png "ServiceMap")
+
+7. Now select SmartHotelWeb1 VM and other two VMs  under Machines then you will be able to view the dependencies.
+
+    ![Screenshot showing the dependencies view in Azure Migrate.](images/Exercise1/SmartHotelWeb1.png "DependencyMap")
 
 #### Task summary 
 
