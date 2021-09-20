@@ -44,9 +44,9 @@ In this task you will create a new Azure SQL database to migrate the on-premises
 
    > **Note**: To select the **Standard** database tier, select **Configure database**, then select **Standard** from the dropdown for **Service tier** and select **Apply**.
 
-   ![Screenshot for selecting database tier.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/sqldb1.png?raw=true "selecting database tier")
+   ![Screenshot for selecting database tier.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/Exe2Task1Step3-1.png?raw=true "selecting database tier")
 
-   ![Screenshot for selecting database tier.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/sqldb2.png?raw=true "selecting database tier")
+   ![Screenshot for selecting database tier.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/Exe2Task1Step3-2.png?raw=true "selecting database tier")
 
     The final screenshot will look like this:
 
@@ -111,11 +111,11 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
 
 1. Return to the **Azure Migrate** blade in the Azure portal. Select the **Overview** panel, then select **Assess and migrate databases**.
 
-   ![Screenshot showing the Azure Migrate Overview blade in the Azure portal, with the 'Assess and migrate databases' button highlighted.](images/Exercise2/assess-migrate-db-2.png "Assess and migrate databases button")  
+   ![Screenshot showing the Azure Migrate Overview blade in the Azure portal, with the 'Assess and migrate databases' button highlighted.](images/Exercise2/Exe2Task3Step1.png "Assess and migrate databases button")  
 
 2. Under **Assessment tools**, click on **Click here** link to add a tool.
 
-   ![Screenshot showing the 'Select assessment tool' step of the 'Add a tool' wizard in Azure Migrate, with the 'Azure Migrate: Database Assessment' tool selected.](images/Exercise2/addtool-1-2.png "Add database assessment tool")
+   ![Screenshot showing the 'Select assessment tool' step of the 'Add a tool' wizard in Azure Migrate, with the 'Azure Migrate: Database Assessment' tool selected.](images/Exercise2/Exe2Task3Step2.png "Add database assessment tool")
    
  > **Note**: Change the Project in the right hand top corner if you don't see the **Azure Migrate: Database Assessment** panel.
 
@@ -203,7 +203,7 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
 
 18. Return to the **Azure Migrate - SQL Server(only)** blade in the Azure portal. Refreshing the page should now show the assessed database.
 
-    ![Screenshot of the 'Azure Migrate - Databases' blade in the Azure portal, showing 1 assessed database.](images/Exercise2/db-assessed-2.png "Azure Migrate - Database Assessment")
+    ![Screenshot of the 'Azure Migrate - Databases' blade in the Azure portal, showing 1 assessed database.](images/Exercise2/Exe2Task3Step18.png "Azure Migrate - Database Assessment")
 
 #### Task summary 
 
