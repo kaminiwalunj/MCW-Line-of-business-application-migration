@@ -154,7 +154,7 @@ In this task, you will register your Hyper-V host with the Azure Migrate: Server
 
    **Note:** You may need to add the migration tool yourself by following the link below the **Migration Tools** section, selecting **Azure Migrate: Server Migration**, then selecting **Add tool(s)**. 
 
-   ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](images/Exercise3/discover-1-2.png "Azure Migrate: Server Migration - Discover")
+   ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](images/Exercise3/Exe3Task3Step1.png "Azure Migrate: Server Migration - Discover")
 
 2. In the **Discover machines** panel,
    - under **Are your machines virtualized**, select **Yes, with Hyper-V**.
@@ -203,7 +203,7 @@ In this task, you will register your Hyper-V host with the Azure Migrate: Server
 
 13. The **Azure Migrate: Server Migration** panel should now show 5 discovered servers..
 
-    ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](images/Exercise3/discover-8-2.png "Discovered servers")
+    ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](images/Exercise3/Exe3Task3Step13.png "Discovered servers")
 
 #### Task summary 
 
@@ -254,7 +254,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
 8. In the **Azure Migrate - Windows, Linux and SQL Server** blade, under **Azure Migrate: Server Migration**, select the **Overview** button.
 
-   ![Screenshot of the 'Azure Migrate - Servers' blade with the 'Overview' button in the 'Azure Migrate: Server Migration' panel highlighted.](images/Exercise3/replicate-7-2.png "Overview link")
+   ![Screenshot of the 'Azure Migrate - Servers' blade with the 'Overview' button in the 'Azure Migrate: Server Migration' panel highlighted.](images/Exercise3/Exe3Task4Step8.png "Overview link")
 
 9. Confirm that the 3 machines are replicating.
 
